@@ -1,38 +1,38 @@
 { 
-   "name": "Dimensity8000/8100", 
-   "author": "Suni", 
-   "configVersion": 8, 
-   "CpuGovernor": { 
-     "enable": true, 
-     "params": { 
-       "activeRateHz": 60, 
-       "idleRateHz": 30, 
-       "minFreqStep": 200 
+主要的
+query为空
+主要的
+取消更改
+提交更改。
+编辑
+预演
+使用 GitHub在你身边55％
+缩进模式
      }, 
-     "policies": [ 
+空
        { 
-         "coreNum": 4, 
-         "perfScale": 100, 
-         "lowPowerFreq": 600, 
-         "optimalFreq": 1400, 
-         "modelFreq": 2000, 
-         "modelPower": 300 
+制表符
+缩进尺寸
+换行模式
+无包裹
+软包
+通过
        }, 
        { 
-         "coreNum": 3, 
-         "perfScale": 260, 
-         "lowPowerFreq": 700, 
-         "optimalFreq": 2000, 
-         "modelFreq": 2850, 
-         "modelPower": 1610 
+拖拽，
+选择或粘贴它们。
+上传你的文件……
+我们不支持这种文件类型。
+再试一次
+有
        }, 
        { 
-         "coreNum": 1, 
-         "perfScale": 260, 
-         "lowPowerFreq": 800, 
-         "optimalFreq": 2200, 
-         "modelFreq": 2850, 
-         "modelPower": 1610 
+GIF、JPEG、JPG、MOV、MP4、PNG、SVG或 WEBM
+附加文档需要对此存储库的写权限。
+再试一次
+有
+GIF、JPEG、JPG、MOV、MP4、PNG、SVG或 WEBM
+我们不支持这种文件类型。
        } 
      ], 
      "modes": { 
