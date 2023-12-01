@@ -3,9 +3,9 @@
 int main() {
     int num1, num2, sum;
 
-    printf("请输入第一个数字: ");
+    printf(" ");
     scanf("%d", &num1);
-    printf("请输入第二个数字: ");
+    printf(" ");
     scanf("%d", &num2);
 
     sum = num1 + num2;
