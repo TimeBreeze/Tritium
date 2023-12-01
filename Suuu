@@ -9,7 +9,7 @@ int main() {
     scanf("%d", &num2);
 
     sum = num1 + num2;
-    printf("两个数的和是: %d\n", sum);
+    printf(" %d\n", sum);
 
     return 0;
 }
