@@ -3,13 +3,13 @@
 int main() {
     int num1, num2, sum;
 
-    printf(" ");
+    printf("");
     scanf("%d", &num1);
-    printf(" ");
+    printf("");
     scanf("%d", &num2);
 
     sum = num1 + num2;
-    printf(" %d\n", sum);
+    printf("%d\n",sum);
 
     return 0;
 }
