@@ -1,15 +1,23 @@
-#include <stdio.h>
+#include <iostream>
+#include <thread>
+
+void task1() {
+    std::cout << "Task 1 executing..." << std::endl;
+    // 执行任务1的代码
+}
+
+void task2() {
+    std::cout << "Task 2 executing..." << std::endl;
+    // 执行任务2的代码
+}
 
 int main() {
-    int num1, num2, sum;
+    std::thread t1(task1); // 创建线程t1执行task1函数
+    std::thread t2(task2); // 创建线程t2执行task2函数
 
-    printf("");
-    scanf("%d", &num1);
-    printf("");
-    scanf("%d", &num2);
-
-    sum = num1 + num2;
-    printf("%d\n",sum);
+    t1.join(); // 等待线程t1结束
+    t2.join(); // 等待线程t2结束
 
     return 0;
 }
+ 
