@@ -1,4 +1,4 @@
-？？8# Tritium调度
+# Tritium Scheduler
 
 基于 chenzyadb 的 CuprumTurbo-Scheduler 打造的一个节能，高性能的调度项目
 专为已Root 的设备提供可靠的CPU GPU控制
