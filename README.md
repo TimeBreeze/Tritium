@@ -1,4 +1,4 @@
-8# Tritium调度
+？8# Tritium调度
 
 基于 chenzyadb 的 CuprumTurbo-Scheduler 打造的一个节能，高性能的调度项目
 专为已Root 的设备提供可靠的CPU GPU控制
@@ -54,4 +54,4 @@
 - 是否存在以下冲突模块:
 - 是否使用官方内核:
 - 系统版本:
-- 游戏的话必须有scene记录的游戏帧数长截图
+- 游戏的话必须有scene记录的游戏帧数图（长截图到底）
