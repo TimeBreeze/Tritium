@@ -21,7 +21,7 @@
 
 # 使用方法及使用须知
 
-本调度配置文件必须搭配Cutoolbox APP使用
+本调度可以使用配置文件导入Cutoolbox APP使用，也可以使用magisk模块刷入使用
 
 安装cutoolbox 之后给cutoolbox无障碍和电池无限制权限
 
