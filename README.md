@@ -1,6 +1,7 @@
 # Tritium Scheduler
 
 一个专注于Snapdragon的调度.
+
 基于CuprumTurbo Scheduler
 
 本调度内置四种调度模式
