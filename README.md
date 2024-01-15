@@ -1,6 +1,6 @@
 # Tritium Scheduler
 
-基于 chenzyadb 的 CuprumTurbo-Scheduler 打造的一个调度
+基于CuprumTurbo打造的一个专注于Snapdragon的调度
 
 本调度内置四种调度模式
 
