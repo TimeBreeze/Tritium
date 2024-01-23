@@ -1,0 +1,365 @@
+{
+  "name": "Snapdragon820/821",
+  "author": "chenzyadb",
+  "configVersion": 9,
+  "CpuGovernor": {
+    "enable": true,
+    "params": {
+      "activeRateHz": 60,
+      "idleRateHz": 30,
+      "minFreqStep": 200
+    },
+    "policies": [
+      {
+        "coreNum": 2,
+        "perfScale": 100,
+        "lowPowerFreq": 500,
+        "optimalFreq": 1600,
+        "modelFreq": 1600,
+        "modelPower": 800
+      },
+      {
+        "coreNum": 2,
+        "perfScale": 110,
+        "lowPowerFreq": 600,
+        "optimalFreq": 2150,
+        "modelFreq": 2150,
+        "modelPower": 2000
+      }
+    ],
+    "modes": {
+      "powersave": {
+        "powerLimit": 3000,
+        "perfMargin": [
+          10,
+          10
+        ],
+        "upRateLatency": 1000,
+        "overHeatTemp": 80,
+        "burstCapacity": 8000,
+        "recoverTime": 2000,
+        "freqBurst": {
+          "none": {
+            "durationTime": 0,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 0
+          },
+          "tap": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 20
+          },
+          "swipe": {
+            "durationTime": 500,
+            "lowLatency": false,
+            "extraMargin": 10,
+            "boost": 0
+          },
+          "gesture": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 20
+          },
+          "heavyload": {
+            "durationTime": 2000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 0
+          },
+          "jank": {
+            "durationTime": 0,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 0
+          },
+          "bigJank": {
+            "durationTime": 100,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 40
+          }
+        }
+      },
+      "balance": {
+        "powerLimit": 4000,
+        "perfMargin": [
+          20,
+          20
+        ],
+        "upRateLatency": 800,
+        "overHeatTemp": 80,
+        "burstCapacity": 12000,
+        "recoverTime": 3000,
+        "freqBurst": {
+          "none": {
+            "durationTime": 0,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 0
+          },
+          "tap": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 20
+          },
+          "swipe": {
+            "durationTime": 500,
+            "lowLatency": false,
+            "extraMargin": 10,
+            "boost": 0
+          },
+          "gesture": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 20
+          },
+          "heavyload": {
+            "durationTime": 2000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 0
+          },
+          "jank": {
+            "durationTime": 100,
+            "lowLatency": true,
+            "extraMargin": 0,
+            "boost": 40
+          },
+          "bigJank": {
+            "durationTime": 100,
+            "lowLatency": true,
+            "extraMargin": 20,
+            "boost": 40
+          }
+        }
+      },
+      "performance": {
+        "powerLimit": 5000,
+        "perfMargin": [
+          30,
+          30
+        ],
+        "upRateLatency": 600,
+        "overHeatTemp": 90,
+        "burstCapacity": 20000,
+        "recoverTime": 4000,
+        "freqBurst": {
+          "none": {
+            "durationTime": 0,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 0
+          },
+          "tap": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 20
+          },
+          "swipe": {
+            "durationTime": 500,
+            "lowLatency": false,
+            "extraMargin": 10,
+            "boost": 0
+          },
+          "gesture": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 20
+          },
+          "heavyload": {
+            "durationTime": 2000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 0
+          },
+          "jank": {
+            "durationTime": 100,
+            "lowLatency": true,
+            "extraMargin": 0,
+            "boost": 40
+          },
+          "bigJank": {
+            "durationTime": 500,
+            "lowLatency": true,
+            "extraMargin": 20,
+            "boost": 40
+          }
+        }
+      },
+      "fast": {
+        "powerLimit": 10000,
+        "perfMargin": [
+          30,
+          30
+        ],
+        "upRateLatency": 400,
+        "overHeatTemp": 95,
+        "burstCapacity": 0,
+        "recoverTime": 0,
+        "freqBurst": {
+          "none": {
+            "durationTime": 0,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 0
+          },
+          "tap": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 0,
+            "boost": 20
+          },
+          "swipe": {
+            "durationTime": 500,
+            "lowLatency": false,
+            "extraMargin": 10,
+            "boost": 0
+          },
+          "gesture": {
+            "durationTime": 1000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 20
+          },
+          "heavyload": {
+            "durationTime": 2000,
+            "lowLatency": false,
+            "extraMargin": 20,
+            "boost": 0
+          },
+          "jank": {
+            "durationTime": 100,
+            "lowLatency": true,
+            "extraMargin": 0,
+            "boost": 40
+          },
+          "bigJank": {
+            "durationTime": 500,
+            "lowLatency": true,
+            "extraMargin": 20,
+            "boost": 40
+          }
+        }
+      }
+    }
+  },
+  "ThreadSchedOpt": {
+    "enable": true,
+    "GameRenderThread": {
+      "cpus": [
+        3
+      ],
+      "nice": -20
+    },
+    "GameMainThread": {
+      "cpus": [
+        2
+      ],
+      "nice": -20
+    },
+    "GameProcessThread": {
+      "cpus": [
+        0,
+        1,
+        2
+      ],
+      "nice": -16
+    },
+    "UIThread": {
+      "cpus": [
+        2,
+        3
+      ],
+      "nice": -16
+    },
+    "MediaThread": {
+      "cpus": [
+        0,
+        1,
+        2
+      ],
+      "nice": -20
+    },
+    "WebViewThread": {
+      "cpus": [
+        2,
+        3
+      ],
+      "nice": -16
+    },
+    "ProcessThread": {
+      "cpus": [
+        0,
+        1,
+        2
+      ],
+      "nice": -12
+    },
+    "CoProcessThread": {
+      "cpus": [
+        0,
+        1
+      ],
+      "nice": -12
+    },
+    "JunkThread": {
+      "cpus": [
+        0,
+        1
+      ],
+      "nice": 0
+    },
+    "Initial": {
+      "cpus": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "nice": 0
+    }
+  },
+  "MtkGpuGovernor": {
+    "enable": false
+  },
+  "FileWriter": {
+    "enable": true,
+    "scenes": {
+      "init": [
+        {
+          "path": "/dev/cpuset/restricted/cpus",
+          "text": "0-1"
+        },
+        {
+          "path": "/dev/cpuset/system-background/cpus",
+          "text": "0-1"
+        },
+        {
+          "path": "/dev/cpuset/background/cpus",
+          "text": "0-1"
+        },
+        {
+          "path": "/dev/cpuset/foreground/cpus",
+          "text": "0-3"
+        },
+        {
+          "path": "/dev/cpuset/top-app/cpus",
+          "text": "0-3"
+        }
+      ],
+      "screenOn": [],
+      "screenOff": [],
+      "powersaveMode": [],
+      "balanceMode": [],
+      "performanceMode": [],
+      "fastMode": []
+    }
+  }
+}
