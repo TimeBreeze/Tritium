@@ -1,6 +1,6 @@
 {
   "versionCode": 19,
   "version": "V3.2.1",
-  "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/V3.2.1/Magisk.Tritium.zip",
+  "zipUrl": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/664454632/f9a7f27c-3300-4aa5-9442-5fd595c3f638?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240222%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240222T144815Z&X-Amz-Expires=300&X-Amz-Signature=487df3f8fd238727e7c5feb063b9f5bc8c077efcf67ba20f4d3aaff8edcdc3e3&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=664454632&response-content-disposition=attachment%3B%20filename%3DMagisk.Tritium.zip&response-content-type=application%2Foctet-stream",
   "changelog": "https://github.com/TimeBreeze/Tritium/blob/main/changelog.md"
 }
