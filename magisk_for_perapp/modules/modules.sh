@@ -72,8 +72,8 @@ install_cu_jank_detector() {
 
 install_break_system_limit() {
     echo "   - 正在为您安装解除系统性能限制模块"
-    magisk --install-module "$MODPATH"/modules/break_system_limit.zip
-    rm -rf "$MODPATH"/modules/break_system_limit.zip
+    magisk --install-module "$MODPATH"/modules/移除温控.zip
+    rm -rf "$MODPATH"/modules/移除温控.zip
 }
 
 

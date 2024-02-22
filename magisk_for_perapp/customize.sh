@@ -8,7 +8,7 @@ LATESTARTSERVICE=true
 set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm $MODPATH/CuAttach 0 0 0755
 
-sh modules/modules.sh
+sh $MODPATH/modules/modules.sh
 
 rm -rf /data/powercfg.json
 rm -rf /data/powercfg.sh
