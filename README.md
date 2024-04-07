@@ -2,7 +2,7 @@
 
 一个专注于Snapdragon的调度.
 
-基于CuprumTurbo Scheduler
+基于CuprumTurbo Scheduler@chenzyadb
 
 本调度内置四种调度模式
 
