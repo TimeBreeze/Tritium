@@ -1,6 +1,7 @@
 id=ct_module
 name=Tritium Scheduler
-version=V3.2.1
-versionCode=19
-author=Suni&chenzyadb&Oldmemorie
-description= 专注于Snapdragon的CuprumTrubo Scheduler 
+version=V4.0.0
+versionCode=26
+author=Suni
+description=为骁龙优化的CuprumTrubo
+updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json

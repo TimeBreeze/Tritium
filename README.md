@@ -1,8 +1,10 @@
 # Tritium Scheduler
 
+### 官方网站：[Tritium | Tritium (nightrainmilkyway.cn)](https://tritium.nightrainmilkyway.cn/)
+
 一个专注于Snapdragon的调度.
 
-基于CuprumTurbo Scheduler@chenzyadb
+基于[CuprumTurbo Scheduler]([chenzyadb/CuprumTurbo-Scheduler: A Simple and Reliable Performance Scheduler. (github.com)](https://github.com/chenzyadb/CuprumTurbo-Scheduler))@[chenzyadb](https://github.com/chenzyadb)
 
 本调度内置四种调度模式
 
