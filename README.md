@@ -6,7 +6,7 @@
 
 基于[CuprumTurbo Scheduler]([chenzyadb/CuprumTurbo-Scheduler: A Simple and Reliable Performance Scheduler. (github.com)](https://github.com/chenzyadb/CuprumTurbo-Scheduler))@[chenzyadb](https://github.com/chenzyadb)
 
-本调度内置四种调度模式
+本调度内置四种模式
 
 - 省电模式：不推荐日常使用，推荐作为待机时使用的模式
 
@@ -30,11 +30,12 @@
 
 拓展功能的话根据自己需求到APP里面的**拓展功能**选择模块安装
 
-然后点击**自定义配置** 点击**导入** 找到我的配置文件选择导入
+然后点击**自定义配置** 点击**导入**找到我的配置文件选择导入
 
 Magisk模块版使用方法 
 
 刷入后会在Android文件夹里面生成一个CT文件夹 
+
 模式配置和日志都在里面查看
 
 
