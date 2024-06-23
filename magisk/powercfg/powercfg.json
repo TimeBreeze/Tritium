@@ -1,0 +1,13 @@
+{
+    "name": "CuprumTurbo V19",
+    "author": "chenzyadb",
+    "version": "20240615",
+    "versionCode": 19,
+    "features": {
+        "strict": true,
+        "pedestal": true
+    },
+    "module": "cpu_limiter",
+    "state": "/sdcard/Android/ct/cur_mode.txt",
+    "entry": "/data/powercfg.sh"
+}
