@@ -1,66 +1,55 @@
-name: Pack and Release
+name: Package and Release Workflow
 
 on:
   push:
     branches:
-      - main # 触发此工作流的分支，根据实际情况修改
+      - main  # 只有在 main 分支上推送时触发
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Read Config
-      id: read_config
-      run: |
-        # 读取config.json内容并输出为环境变量
-        jq -r '.source_dir as $dir | .exclude_dirs_files as $excludes | .zip_name as $zip | .prerelease as $prerelease | .release_version as $version | .release_notes as $notes | 
-        "$dir,$excludes,$zip,$prerelease,$version,$notes"' config.json > config.env
-        cat config.env >> $GITHUB_ENV
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x' # 使用适合您项目的Python版本
-
-    - name: Install required packages
-      run: pip install zipfile
-
-    - name: Pack files into ZIP
-      run: |
-        source_dir=${{ env.source_dir }}
-        exclude_dirs=${{ env.exclude_dirs_files }}
-        zip_name=${{ env.zip_name }}
-        
-        # 创建ZIP文件，排除指定的文件和目录
-        echo "Creating ZIP archive..."
-        (
-          cd "$source_dir"
-          zip -r "../../${zip_name}" . -x "${exclude_dirs// / -x }"
-        )
+      - name: Read Config File
+        id: read_config
+        run: |
+          echo "::set-output name=contents::$(cat config)"
       
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 必须授权访问仓库
-      with:
-        tag_name: ${{ env.release_version }}
-        release_name: Release ${{ env.release_version }}
-        body: ${{ env.release_notes }}
-        draft: false
-        prerelease: ${{ env.prerelease }}
+      - name: Parse Config JSON
+        id: parse_config
+        run: |
+          echo "${{ steps.read_config.outputs.contents }}" > config.json
 
-    - name: Upload Release Asset
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./${{ env.zip_name }}
-        asset_name: ${{ env.zip_name }}
-        asset_content_type: application/zip
+      - name: Install zip
+        run: sudo apt-get install zip
+      
+      - name: Prepare Environment
+        run: |
+          # 从 config.json 文件中读取配置
+          CONFIG=$(cat config.json)
+          DIRECTORY=$(echo $CONFIG | jq -r '.directory')
+          IGNORE=$(echo $CONFIG | jq -r '.ignore // empty')
+          FILENAME=$(echo $CONFIG | jq -r '.filename // "archive.zip"')
+          PRERELEASE=$(echo $CONFIG | jq -r '.prerelease // false')
+          RELEASE_VERSION=$(echo $CONFIG | jq -r '.version // "1.0.0"')
+          RELEASE_BODY=$(echo $CONFIG | jq -r '.body // "Release notes"')
+
+      - name: Create Archive
+        run: |
+          # 创建压缩文件
+          zip -r $FILENAME $DIRECTORY -x "$IGNORE"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: $RELEASE_VERSION
+          release_name: Release $RELEASE_VERSION
+          prerelease: $PRERELEASE
+          body: $RELEASE_BODY
+          asset_paths: $FILENAME
