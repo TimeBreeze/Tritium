@@ -24,8 +24,8 @@ jobs:
           echo "${{ steps.read_config.outputs.contents }}" > config.json
 
       - name: Install zip
-        run: sudo apt-get install zip
-      
+        run: sudo apt-get install zip -y  # 自动确认安装
+
       - name: Prepare Environment
         run: |
           # 从 config.json 文件中读取配置
