@@ -1,8 +1,8 @@
 {
-  "source_dir": "mqgisk", // 需要压缩的指定目录
-  "ignore_patterns": [".git", "node_modules"], // 忽略的文件夹及文件，可以是数组
-  "archive_name": "magisk", // 压缩文件的命名
-  "prerelease": true, // 是否为预发布
-  "release_version": "1.0.0", // release版本
-  "release_notes": "这是版本1.0.0的更新日志。包含了..." // 说明
+  "source_dir": "magisk", // 需要打包的目录
+  "exclude_dirs_files": [".git", ".github"], // 要排除的文件或目录列表
+  "zip_name": "magisk.zip", // 压缩文件名
+  "prerelease": true, // 是否为预发布，默认为false
+  "release_version": "1.0.0", // 发布版本号
+  "release_notes": "This is a sample release with automated packaging." // 发布说明
 }
