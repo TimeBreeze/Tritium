@@ -1,0 +1,57 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - main # 触发工作流的分支，根据实际情况修改
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Read Config
+      id: read_config
+      run: |
+        # 读取config.json并输出为环境变量
+        SOURCE_DIR=$(cat config.json | jq -r '.source_dir')
+        IGNORE_PATTERNS=$(cat config.json | jq -r '.ignore_patterns | join(" ")')
+        ARCHIVE_NAME=$(cat config.json | jq -r '.archive_name')
+        PRERELEASE=$(cat config.json | jq -r '.prerelease | tostring')
+        RELEASE_VERSION=$(cat config.json | jq -r '.release_version')
+        RELEASE_NOTES=$(cat config.json | jq -r '.release_notes')
+
+        echo "::set-output name=source_dir::$SOURCE_DIR"
+        echo "::set-output name=ignore_patterns::$IGNORE_PATTERNS"
+        echo "::set-output name=archive_name::$ARCHIVE_NAME"
+        echo "::set-output name=prerelease::$PRERELEASE"
+        echo "::set-output name=release_version::$RELEASE_VERSION"
+        echo "::set-output name=release_notes::$RELEASE_NOTES"
+
+    - name: Create Archive
+      run: |
+        # 根据配置创建zip文件
+        zip -r ${{ steps.read_config.outputs.archive_name }} ${{ steps.read_config.outputs.source_dir }} -x ${{ steps.read_config.outputs.ignore_patterns }}
+
+    - name: Create GitHub Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.read_config.outputs.release_version }}
+        release_name: Release ${{ steps.read_config.outputs.release_version }}
+        body: ${{ steps.read_config.outputs.release_notes }}
+        draft: false
+        prerelease: ${{ steps.read_config.outputs.prerelease }}
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./${{ steps.read_config.outputs.archive_name }}
+        asset_name: ${{ steps.read_config.outputs.archive_name }}
+        asset_content_type: application/zip
