@@ -195,7 +195,7 @@
       },
       "fast": {
         "powerLimit": 10000,
-        "perfMargin": [30, 80, 90],
+        "perfMargin": [30, 85, 90],
         "upRateLatency": 0,
         "overHeatTemp": 95,
         "burstCapacity": 0,
