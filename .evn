@@ -1,0 +1,7 @@
+TARGET_DIR=magisk
+IGNORE_DIRS=node_modules,tests
+IGNORE_FILES=*.log,*.tmp
+ZIP_NAME=xx.zip
+RELEASE_NAME=v1.0.0
+RELEASE_DESC=This is the release description.
+PRE_RELEASE=false

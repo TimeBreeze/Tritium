@@ -1,83 +1,50 @@
-name: Release and Pack
+name: Create Release
 
 on:
   push:
-    branches:
-      - main
     tags:
-      - 'v*'  # 触发条件，当有新tag时运行
+      - 'v*.*.*'
 
 jobs:
-  pack_and_release:
+  build:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    # 安装jq
-    - name: Install jq
-      run: sudo apt-get update && sudo apt-get install -y jq
-
-    # 读取配置文件
-    - name: Read config file
-      id: config
+    - name: Load environment variables
       run: |
-        CONFIG=$(cat ./config.json)
-        echo "::set-output name=config::$CONFIG"
+        set -o allexport
+        source .env
+        set +o allexport
 
-    # 解析配置文件并转换is_prerelease到布尔值
-    - name: Parse config and convert to boolean
-      id: parse_config
+    - name: Install zip
+      run: sudo apt-get install zip -y
+
+    - name: Create zip file
       run: |
-        DIR_TO_PACK=$(echo "${{ steps.config.outputs.config }}" | jq -r '.directory')
-        IGNORED_FILES=$(echo "${{ steps.config.outputs.config }}" | jq -r '.ignored_files')
-        ZIP_NAME=$(echo "${{ steps.config.outputs.config }}" | jq -r '.zip_name')
-        IS_PRERELEASE=$(echo "${{ steps.config.outputs.config }}" | jq -r '.is_prerelease')
-        RELEASE_VERSION=$(echo "${{ steps.config.outputs.config }}" | jq -r '.version')
-        RELEASE_NOTES=$(echo "${{ steps.config.outputs.config }}" | jq -r '.notes')
-        
-        # 转换 is_prerelease 到布尔值
-        IS_PRERELEASE_BOOL=$(echo "$IS_PRERELEASE" | awk '{print ($0=="true")?"true":"false"}')
-        echo "IS_PRERELEASE_BOOL=$IS_PRERELEASE_BOOL" >> $GITHUB_ENV
-        echo "DIR_TO_PACK=$DIR_TO_PACK" >> $GITHUB_ENV
-        echo "IGNORED_FILES=$IGNORED_FILES" >> $GITHUB_ENV
-        echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
-        echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
-        echo "RELEASE_NOTES=$RELEASE_NOTES" >> $GITHUB_ENV
+        mkdir -p release
+        zip -r "release/$ZIP_NAME" "$TARGET_DIR" -x $IGNORE_DIRS $IGNORE_FILES
 
-    # 打包文件
-    - name: Pack files
-      run: |
-        # 忽略文件列表处理
-        IGNORE_FLAGS=""
-        for item in $(echo "${{ env.IGNORED_FILES }}" | tr ',' '\n'); do
-          IGNORE_FLAGS+=" --exclude='$item'"
-        done
-        
-        # 打包
-        zip -r "${{ env.ZIP_NAME }}.zip" ${{ env.DIR_TO_PACK }}$IGNORE_FLAGS
-
-    # 创建或更新Release
-    - name: Create or update release
+    - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ env.RELEASE_VERSION }}
-        release_name: Release ${{ env.RELEASE_VERSION }}
-        body: ${{ env.RELEASE_NOTES }}
+        tag_name: ${{ github.ref }}
+        release_name: $RELEASE_NAME
+        body: $RELEASE_DESC
         draft: false
-        prerelease: ${{ env.IS_PRERELEASE_BOOL }}  # 使用转换后的布尔值
+        prerelease: $PRE_RELEASE
 
-    # 上传压缩包作为资产
-    - name: Upload release asset
-      id: upload-release-asset 
+    - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} 
-        asset_path: ./${{ env.ZIP_NAME }}.zip
-        asset_name: ${{ env.ZIP_NAME }}.zip
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: release/$ZIP_NAME
+        asset_name: $ZIP_NAME
         asset_content_type: application/zip
