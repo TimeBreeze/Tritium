@@ -1,12 +1,8 @@
 {
-  "source_dir": "magisk", 
-  "exclude": [          
-    ".git",
-    ".DS_Store",
-    "*.log"
-  ],
-  "zip_name": "magisk.zip", 
-  "is_prerelease": true, 
-  "release_version": "1.0.0", 
-  "release_notes": "This is the first version of my project." 
+  "directory": "magisk",
+  "ignored_files": ["node_modules", ".git"],
+  "zip_name": "my-project",
+  "is_prerelease": "false",
+  "version": "1.0.0",
+  "notes": "Initial release"
 }
