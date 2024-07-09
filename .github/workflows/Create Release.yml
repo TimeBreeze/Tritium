@@ -13,14 +13,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install zip -y
+        pip install python-dotenv
+
     - name: Load environment variables
       run: |
-        set -o allexport
-        source .env
-        set +o allexport
-
-    - name: Install zip
-      run: sudo apt-get install zip -y
+        python -m dotenv -f .env set > /tmp/env.sh
+        source /tmp/env.sh
+      shell: bash
 
     - name: Create zip file
       run: |
