@@ -1,55 +1,57 @@
-name: Package and Release Workflow
+name: Build and Release
 
 on:
   push:
     branches:
-      - main  # 只有在 main 分支上推送时触发
-  workflow_dispatch:  # 允许手动触发
+      - main # 或者是你的默认分支名称
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Read Config File
-        id: read_config
-        run: |
-          echo "::set-output name=contents::$(cat config)"
-      
-      - name: Parse Config JSON
-        id: parse_config
-        run: |
-          echo "${{ steps.read_config.outputs.contents }}" > config.json
+    - name: Read config file
+      id: config
+      run: |
+        echo "::set-output name=SOURCE_DIR::$(cat config | jq -r '.source_dir')"
+        echo "::set-output name=EXCLUDE::$(cat config | jq -r '.exclude')"
+        echo "::set-output name=ZIP_NAME::$(cat config | jq -r '.zip_name')"
+        echo "::set-output name=IS_PRERELEASE::$(cat config | jq -r '.is_prerelease')"
+        echo "::set-output name=RELEASE_VERSION::$(cat config | jq -r '.release_version')"
+        echo "::set-output name=RELEASE_NOTES::$(cat config | jq -r '.release_notes')"
 
-      - name: Install zip
-        run: sudo apt-get install zip -y  # 自动确认安装
+    - name: Setup jq
+      run: sudo apt-get install -y jq
 
-      - name: Prepare Environment
-        run: |
-          # 从 config.json 文件中读取配置
-          CONFIG=$(cat config.json)
-          DIRECTORY=$(echo $CONFIG | jq -r '.directory')
-          IGNORE=$(echo $CONFIG | jq -r '.ignore // empty')
-          FILENAME=$(echo $CONFIG | jq -r '.filename // "archive.zip"')
-          PRERELEASE=$(echo $CONFIG | jq -r '.prerelease // false')
-          RELEASE_VERSION=$(echo $CONFIG | jq -r '.version // "1.0.0"')
-          RELEASE_BODY=$(echo $CONFIG | jq -r '.body // "Release notes"')
+    - name: Build ZIP file
+      run: |
+        SOURCE_DIR="${{ steps.config.outputs.SOURCE_DIR }}"
+        EXCLUDE="${{ steps.config.outputs.EXCLUDE }}"
+        ZIP_NAME="${{ steps.config.outputs.ZIP_NAME }}"
+        find $SOURCE_DIR \( $(echo $EXCLUDE | jq -r '.[]') -type d -print \) -prune -o -type f -print0 | xargs -0 zip -@r $ZIP_NAME
 
-      - name: Create Archive
-        run: |
-          # 创建压缩文件
-          zip -r $FILENAME $DIRECTORY -x "$IGNORE"
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.config.outputs.RELEASE_VERSION }}
+        release_name: Release ${{ steps.config.outputs.RELEASE_VERSION }}
+        body: ${{ steps.config.outputs.RELEASE_NOTES }}
+        draft: false
+        prerelease: ${{ steps.config.outputs.IS_PRERELEASE }}
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: $RELEASE_VERSION
-          release_name: Release $RELEASE_VERSION
-          prerelease: $PRERELEASE
-          body: $RELEASE_BODY
-          asset_paths: $FILENAME
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./${{ steps.config.outputs.ZIP_NAME }}
+        asset_name: ${{ steps.config.outputs.ZIP_NAME }}
+        asset_content_type: application/zip
