@@ -29,11 +29,13 @@ jobs:
         zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME ./*
         cd configs
         zip -r $GITHUB_WORKSPACE/$CONFIG_NAME ./*
+        ls -al
 
     - name: Release
       uses: softprops/action-gh-release@v2
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
       with:
-        tag_name: main
         name: $VERSION
         prerelease: ${{ env.IS_PRERELEASE }}
         body: ${{ env.RELEASE_NOTES }}
