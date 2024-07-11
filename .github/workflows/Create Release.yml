@@ -30,40 +30,18 @@ jobs:
         cd configs
         zip -r $GITHUB_WORKSPACE/$CONFIG_NAME ./*
 
-
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref, 'refs/tags/')
       with:
-        tag_name: ${{ env.VERSION }} # 发布的版本号
-        release_name: Tritium_${{ env.VERSION }}  # 发布名称，可以根据需要修改
-        body: |
-           Tritium_${{ env.RELEASE_NOTES }}  # 发布说明，可以根据需要修改
-        draft: false  # 是否作为草稿发布
-        prerelease: ${{ env.IS_PRERELEASE }}  # 是否为预发布版本
+        name: $VERSION
+        prerelease: ${{ env.IS_PRERELEASE }}
+        body: ${{ env.RELEASE_NOTES }}
 
-    - name: Upload Release Assets
-      id: upload-release-assets
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: $GITHUB_WORKSPACE/$ZIP_FILENAME.zip
-        asset_name: ${{ env.ZIP_FILENAME }}.zip
-        asset_content_type: application/zip
+        files: $GITHUB_WORKSPACE/$ZIP_FILENAME.zip,$GITHUB_WORKSPACE/$CONFIG_NAME.zip
+        repository: NightRainMilkyWay/Tritium
+          # note you'll typically need to create a personal access token
+          # with permissions to create releases in the other repo
+        token: ${{ secrets.CUSTOM_GITHUB_TOKEN }} 
 
-    - name: Upload Another Release Asset
-      id: upload_another_release_asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: $GITHUB_WORKSPACE/CONFIG_NAME.zip
-        asset_name: ${{ env.CONFIG_NAME }}.zip
-        asset_content_type: application/zip
-   
-          
+    
