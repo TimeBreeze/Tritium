@@ -7,7 +7,7 @@
         "strict": true,
         "pedestal": true
     },
-    "module": "cpu_limiter",
+    "module": "Tritium",
     "state": "/sdcard/Android/ct/cur_mode.txt",
     "entry": "/data/powercfg.sh"
 }

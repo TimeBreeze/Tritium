@@ -7,51 +7,63 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      DIRECTORY_TO_COMPRESS: ${{ secrets.DIRECTORY_TO_COMPRESS }}
-      ZIP_FILENAME: ${{ secrets.ZIP_FILENAME }}
-      IS_PRERELEASE: ${{ secrets.IS_PRERELEASE }}
-      VERSION: ${{ secrets.VERSION }}
-      RELEASE_NOTES: ${{ secrets.RELEASE_NOTES }}
-
+    name: Create Release
+    runs-on: ubuntu-20.04
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Read Config
+    - uses: actions/checkout@v4
+    - name: Prepare Configuration
       run: |
-        if [ -f "./config.env" ]; then
-          for LINE in $(cat ./config.env); do
-            NAME=$(echo "$LINE" | cut -d '=' -f1)
-            VALUE=$(echo "$LINE" | cut -d '=' -f2-)
-            echo "::set-env name=$NAME::$VALUE"
-          done
-        fi
-
-    - name: Compress Directory
+        CONFIG_ENV=$(cat config.env | grep -w "CONFIG_ENV" | head -n 1 | cut -d "=" -f 2)
+        echo "MODULE_PACKAGING_PATH=$(cat $CONFIG_ENV | grep -w "MODULE_PACKAGING_PATHE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+        echo "ZIP_FILENAME=$(cat $CONFIG_ENV | grep -w "ZIP_FILENAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+        echo "CONFIG_PATH=$(cat $CONFIG_ENV | grep -w "CONFIG_PATH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+        echo "CONFIG_NAM=$(cat $CONFIG_ENV | grep -w "CONFIG_NAM" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+        echo "IS_PRERELEASE=$(cat $CONFIG_ENV | grep -w "IS_PRERELEASE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+        echo "VERSION=$(cat $CONFIG_ENV | grep -w "VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+        echo "RELEASE_NOTES=$(cat $CONFIG_ENV | grep -w "RELEASE_NOTES" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+    
+      # 压缩打包文件
+    - name: Zip Module
       run: |
-        zip -r ${{ env.ZIP_FILENAME }} ${{ env.DIRECTORY_TO_COMPRESS }}
-      
+        cd $GITHUB_WORKSPACE/magisk
+        zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME ./*
+        cd configs
+        zip -r $GITHUB_WORKSPACE/$CONFIG_NAME ./*
+
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
       with:
-        tag_name: v${{ env.VERSION }}
-        release_name: Release ${{ env.VERSION }}
-        body: ${{ env.RELEASE_NOTES }}
-        draft: false
-        prerelease: ${{ env.IS_PRERELEASE == 'true' }}
+        tag_name: ${{ env.VERSION }} # 发布的版本号
+        release_name: Tritium_${{ env.VERSION }}  # 发布名称，可以根据需要修改
+        body: |
+           Tritium_${{ env.RELEASE_NOTES }}  # 发布说明，可以根据需要修改
+        draft: false  # 是否作为草稿发布
+        prerelease: ${{ env.IS_PRERELEASE }}  # 是否为预发布版本
 
-    - name: Upload Release Asset
-      id: upload-release-asset 
+    - name: Upload Release Assets
+      id: upload-release-assets
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} 
-        asset_path: ./${{ env.ZIP_FILENAME }}.zip
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: $GITHUB_WORKSPACE/$ZIP_FILENAME.zip
         asset_name: ${{ env.ZIP_FILENAME }}.zip
         asset_content_type: application/zip
+
+    - name: Upload Another Release Asset
+      id: upload_another_release_asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: $GITHUB_WORKSPACE/CONFIG_NAME.zip
+        asset_name: ${{ env.CONFIG_NAME }}.zip
+        asset_content_type: application/zip
+   
+          
