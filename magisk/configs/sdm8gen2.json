@@ -208,22 +208,22 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
+            "durationTime": 280,
             "lowLatency": false,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 30
           },
           "swipe": {
-            "durationTime": 200,
+            "durationTime": 310,
             "lowLatency": false,
             "extraMargin": 10,
-            "boost": 0
+            "boost": 25
           },
           "gesture": {
-            "durationTime": 100,
+            "durationTime": 570,
             "lowLatency": false,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 30
           },
           "heavyload": {
             "durationTime": 1500,
