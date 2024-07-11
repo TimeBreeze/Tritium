@@ -42,7 +42,7 @@ jobs:
         prerelease: ${{ env.IS_PRERELEASE }}
         body: ${{ env.RELEASE_NOTES }}
 
-        files: *.zip
+        files: /*.zip
         repository: NightRainMilkyWay/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
