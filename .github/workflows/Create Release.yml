@@ -37,12 +37,12 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
       with:
-        tag_name: main
-        name: $VERSION
+        tag_name: ${{ env.VERSION }}
+        name: Tritium_${{ env.VERSION }}
         prerelease: ${{ env.IS_PRERELEASE }}
         body: ${{ env.RELEASE_NOTES }}
 
-        files: $GITHUB_WORKSPACE/$ZIP_FILENAME.zip,$GITHUB_WORKSPACE/$CONFIG_NAME.zip
+        files: *.zip
         repository: NightRainMilkyWay/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
