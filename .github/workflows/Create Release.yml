@@ -33,6 +33,7 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: main
         name: $VERSION
         prerelease: ${{ env.IS_PRERELEASE }}
         body: ${{ env.RELEASE_NOTES }}
