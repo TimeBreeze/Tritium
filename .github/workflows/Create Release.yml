@@ -29,7 +29,9 @@ jobs:
         zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME ./*
         cd configs
         zip -r $GITHUB_WORKSPACE/$CONFIG_NAME ./*
-        cd ..\..\..\
+        cd ../../.
+        ls -al
+
     - name: Release
       uses: softprops/action-gh-release@v2
       env:
