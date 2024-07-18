@@ -1,8 +1,8 @@
 {
-    "name": "CuprumTurbo V19",
-    "author": "chenzyadb",
-    "version": "20240615",
-    "versionCode": 19,
+    "name": "Tritium",
+    "author": "Suni",
+    "version": "V4.1.1正式版",
+    "versionCode": 29,
     "features": {
         "strict": true,
         "pedestal": true
