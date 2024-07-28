@@ -90,8 +90,8 @@
         }
       },
       "balance": {
-        "powerLimit": 2800,
-        "perfMargin": [10, 20, 20],
+        "powerLimit": 3000,
+        "perfMargin": [10, 20, 25],
         "upRateLatency": 410,
         "overHeatTemp": 65,
         "burstCapacity": 16000,
@@ -110,10 +110,10 @@
             "boost": 10
           },
           "swipe": {
-            "durationTime": 350,
-            "lowLatency": false,
-            "extraMargin": 10,
-            "boost": 15
+            "durationTime": 540,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 20
           },
           "gesture": {
             "durationTime": 550,
