@@ -1,8 +1,8 @@
 {
     "name": "Tritium",
     "author": "Suni",
-    "version": "V4.1.3",
-    "versionCode": 32,
+    "version": "V4.1.4",
+    "versionCode": 33,
     "features": {
         "strict": true,
         "pedestal": true

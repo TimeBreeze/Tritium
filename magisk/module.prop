@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Scheduler
-version=V4.1.3 正式版
-versionCode=32
+version=V4.1.4 正式版
+versionCode=33
 author=Suni
 description=为骁龙优化的CuprumTrubo
 updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
