@@ -1,5 +1,5 @@
 {
-  "name": "Snapdragon7+Gen2",
+  "name": "Dimensity1000+",
   "author": "Suni",
   "configVersion": 10,
   "CpuGovernor": {
@@ -13,33 +13,25 @@
     "policies": [
       {
         "coreNum": 4,
-        "perfScale": 120,
+        "perfScale": 100,
         "lowPowerFreq": 600,
-        "optimalFreq": 1400,
-        "modelFreq": 1800,
-        "modelPower": 400
+        "optimalFreq": 1600,
+        "modelFreq": 2000,
+        "modelPower": 320
       },
       {
-        "coreNum": 3,
-        "perfScale": 330,
+        "coreNum": 4,
+        "perfScale": 300,
         "lowPowerFreq": 700,
         "optimalFreq": 1800,
-        "modelFreq": 2500,
-        "modelPower": 1600
-      },
-      {
-        "coreNum": 1,
-        "perfScale": 420,
-        "lowPowerFreq": 800,
-        "optimalFreq": 2000,
-        "modelFreq": 2910,
-        "modelPower": 2640
+        "modelFreq": 2600,
+        "modelPower": 1650
       }
     ],
     "modes": {
       "powersave": {
         "powerLimit": 1500,
-        "perfMargin": [10, 10, 10],
+        "perfMargin": [10, 10],
         "upRateLatency": 600,
         "overHeatTemp": 60,
         "burstCapacity": 12000,
@@ -52,28 +44,28 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
-            "lowLatency": false,
-            "extraMargin": 5,
-            "boost": 5
+            "durationTime": 200,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 10
           },
           "swipe": {
-            "durationTime": 200,
-            "lowLatency": false,
-            "extraMargin": 0,
-            "boost": 0
+            "durationTime": 270,
+            "lowLatency": true,
+            "extraMargin": 10,
+            "boost": 15
           },
           "gesture": {
             "durationTime": 100,
             "lowLatency": false,
-            "extraMargin": 10,
-            "boost": 15
+            "extraMargin": 20,
+            "boost": 0
           },
           "heavyload": {
-            "durationTime": 900,
+            "durationTime": 1000,
             "lowLatency": false,
-            "extraMargin": 10,
-            "boost": 10
+            "extraMargin": 20,
+            "boost": 0
           },
           "jank": {
             "durationTime": 100,
@@ -91,8 +83,8 @@
       },
       "balance": {
         "powerLimit": 3000,
-        "perfMargin": [15, 20, 25],
-        "upRateLatency": 410,
+        "perfMargin": [20, 30],
+        "upRateLatency": 370,
         "overHeatTemp": 65,
         "burstCapacity": 16000,
         "recoverTime": 4000,
@@ -104,19 +96,19 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 270,
+            "durationTime": 100,
             "lowLatency": false,
-            "extraMargin": 15,
-            "boost": 15
+            "extraMargin": 20,
+            "boost": 0
           },
           "swipe": {
-            "durationTime": 540,
+            "durationTime": 570,
             "lowLatency": true,
             "extraMargin": 15,
             "boost": 20
           },
           "gesture": {
-            "durationTime": 570,
+            "durationTime": 590,
             "lowLatency": true,
             "extraMargin": 20,
             "boost": 20
@@ -124,28 +116,28 @@
           "heavyload": {
             "durationTime": 1000,
             "lowLatency": false,
-            "extraMargin": 15,
-            "boost": 20
+            "extraMargin": 20,
+            "boost": 0
           },
           "jank": {
             "durationTime": 500,
             "lowLatency": true,
-            "extraMargin": 0,
-            "boost": 45
+            "extraMargin": 10,
+            "boost": 40
           },
           "bigJank": {
-            "durationTime": 700,
+            "durationTime": 1500,
             "lowLatency": true,
-            "extraMargin": 10,
-            "boost": 65
+            "extraMargin": 15,
+            "boost": 60
           }
         }
       },
       "performance": {
-        "powerLimit": 4700,
-        "perfMargin": [15, 35, 50],
-        "upRateLatency": 80,
-        "overHeatTemp": 75,
+        "powerLimit": 4500,
+        "perfMargin": [50, 55],
+        "upRateLatency": 90,
+        "overHeatTemp": 77,
         "burstCapacity": 20000,
         "recoverTime": 4000,
         "freqBurst": {
@@ -156,46 +148,46 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 250,
+            "durationTime": 330,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 20
+            "boost": 15
           },
           "swipe": {
-            "durationTime": 470,
+            "durationTime": 460,
             "lowLatency": true,
-            "extraMargin": 20,
+            "extraMargin": 15,
             "boost": 20
           },
           "gesture": {
             "durationTime": 100,
             "lowLatency": false,
-            "extraMargin": 5,
+            "extraMargin": 20,
             "boost": 0
           },
           "heavyload": {
-            "durationTime": 1100,
+            "durationTime": 1300,
             "lowLatency": true,
             "extraMargin": 20,
             "boost": 30
           },
           "jank": {
-            "durationTime": 540,
+            "durationTime": 600,
             "lowLatency": true,
-            "extraMargin": 0,
+            "extraMargin": 10,
             "boost": 40
           },
           "bigJank": {
             "durationTime": 1500,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 55
+            "boost": 60
           }
         }
       },
       "fast": {
         "powerLimit": 10000,
-        "perfMargin": [100, 100, 100],
+        "perfMargin": [30, 30],
         "upRateLatency": 0,
         "overHeatTemp": 95,
         "burstCapacity": 0,
@@ -208,15 +200,15 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 430,
+            "durationTime": 350,
             "lowLatency": true,
             "extraMargin": 20,
             "boost": 20
           },
           "swipe": {
-            "durationTime": 460,
+            "durationTime": 500,
             "lowLatency": true,
-            "extraMargin": 20,
+            "extraMargin": 10,
             "boost": 20
           },
           "gesture": {
@@ -226,7 +218,7 @@
             "boost": 0
           },
           "heavyload": {
-            "durationTime": 1500,
+            "durationTime": 2000,
             "lowLatency": true,
             "extraMargin": 20,
             "boost": 40
@@ -252,6 +244,14 @@
     "defaultCpus": [0, 1, 2, 3, 4, 5, 6, 7],
     "defaultPriority": 0,
     "appTypes": {
+      "surfaceflinger": {
+        "pkgName": null,
+        "symbol": "[Ss]urface[Ff]linger"
+      },
+      "system_server": {
+        "pkgName": "system_server",
+        "symbol": null
+      },
       "unity_genshin": {
         "pkgName": "*(.Yuanshen|.GenshinImpact)|*.ys.*",
         "symbol": null
@@ -276,8 +276,12 @@
         "pkgName": "(com.netease.sky|com.tgc.sky)*",
         "symbol": null
       },
+      "native_game": {
+        "pkgName": "*(ea.game.|gameloft.|kiloo.|sybogames.|yodo1.|rockstargames.|corrodinggames.)*",
+        "symbol": null
+      },
       "benchmark": {
-        "pkgName": "com.futuremark.*|*[Bb]ench*",
+        "pkgName": "*[Bb]ench*|com.futuremark.*|*ioncannon.*|*.probe|*.devcheck",
         "symbol": null
       }
     },
@@ -374,6 +378,34 @@
           "priority": 0
         }
       ],
+      "surfaceflinger": [
+        {
+          "threadName": "MAIN_THREAD",
+          "heavyCpus": null,
+          "commonCpus": [4, 5, 6],
+          "priority": -20
+        },
+        {
+          "threadName": "(RenderEngine|OverlayEngine|app)*",
+          "heavyCpus": null,
+          "commonCpus": [4, 5, 6],
+          "priority": -20
+        }
+      ],
+      "system_server": [
+        {
+          "threadName": "MAIN_THREAD",
+          "heavyCpus": null,
+          "commonCpus": [4, 5, 6],
+          "priority": -20
+        },
+        {
+          "threadName": "android.*",
+          "heavyCpus": null,
+          "commonCpus": [4, 5, 6],
+          "priority": -20
+        }
+      ],
       "unity_genshin": [
         {
           "threadName": "MAIN_THREAD",
@@ -394,7 +426,7 @@
           "priority": -12
         },
         {
-          "threadName": "FMOD*",
+          "threadName": "FMOD*|*(Audio|Media)*",
           "heavyCpus": null,
           "commonCpus": [0, 1, 2, 3, 4, 5, 6],
           "priority": -16
@@ -426,7 +458,7 @@
           "priority": -20
         },
         {
-          "threadName": "FMOD*",
+          "threadName": "FMOD*|*(Audio|Media)*",
           "heavyCpus": null,
           "commonCpus": [0, 1, 2, 3, 4, 5, 6],
           "priority": -16
@@ -458,7 +490,7 @@
           "priority": -12
         },
         {
-          "threadName": "FMOD*",
+          "threadName": "FMOD*|*(Audio|Media)*",
           "heavyCpus": null,
           "commonCpus": [0, 1, 2, 3, 4, 5, 6],
           "priority": -16
@@ -480,11 +512,11 @@
         {
           "threadName": "Thread-*",
           "heavyCpus": null,
-          "commonCpus": [0, 1, 2, 3, 4, 5, 6, 7],
+          "commonCpus": [0, 1, 2, 3, 4, 5, 6],
           "priority": -8
         },
         {
-          "threadName": "FMOD*",
+          "threadName": "FMOD*|*(Audio|Media)*",
           "heavyCpus": null,
           "commonCpus": [0, 1, 2, 3, 4, 5, 6],
           "priority": -16
@@ -530,11 +562,84 @@
           "priority": -12
         }
       ],
+      "native_game": [
+        {
+          "threadName": "MAIN_THREAD",
+          "heavyCpus": null,
+          "commonCpus": [4, 5, 6],
+          "priority": -12
+        },
+        {
+          "threadName": "(Thread-|GameThread|NativeThread|MainThread|RenderThread)*",
+          "heavyCpus": [7],
+          "commonCpus": [4, 5, 6],
+          "priority": -20
+        },
+        {
+          "threadName": "(GLThread|FMOD)*|*(Audio|Media)*",
+          "heavyCpus": null,
+          "commonCpus": [4, 5, 6],
+          "priority": -16
+        }
+      ],
       "benchmark": []
     }
   },
   "MtkGpuGovernor": {
-    "enable": false
+    "enable": true,
+    "voltAdjust": {
+      "minVolt": 0,
+      "maxVolt": 100000,
+      "voltOffset": 0
+    },
+    "ddrBoosts": [
+      {
+        "gpuFreq": 0,
+        "ddrMinFreq": 1200
+      },
+      {
+        "gpuFreq": 300,
+        "ddrMinFreq": 1800
+      },
+      {
+        "gpuFreq": 400,
+        "ddrMinFreq": 2400
+      },
+      {
+        "gpuFreq": 500,
+        "ddrMinFreq": 3000
+      },
+      {
+        "gpuFreq": 600,
+        "ddrMinFreq": 3600
+      }
+    ],
+    "modes": {
+      "powersave": {
+        "maxFreq": 450,
+        "minFreq": 250,
+        "upRateThres": 90,
+        "downRateDiff": 10
+      },
+      "balance": {
+        "maxFreq":,620,
+        "minFreq": 340,
+        "upRateThres": 75,
+        "downRateDiff": 15
+      },
+      "performance": {
+        "maxFreq": 780,
+        "minFreq": 630,
+        "upRateThres": 40,
+        "downRateDiff": 30
+      },
+      "fast": {
+        "maxFreq": 850,
+        "minFreq": 800,
+        "upRateThres": 20,
+        "downRateDiff": 20
+      }
+    }
   },
   "FileWriter": {
     "enable": true,

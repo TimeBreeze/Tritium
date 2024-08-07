@@ -40,8 +40,8 @@
       "powersave": {
         "powerLimit": 1500,
         "perfMargin": [10, 10, 10],
-        "upRateLatency": 620,
-        "overHeatTemp": 60,
+        "upRateLatency": 600,
+        "overHeatTemp": 55,
         "burstCapacity": 12000,
         "recoverTime": 4000,
         "freqBurst": {
@@ -52,28 +52,28 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 200,
-            "lowLatency": true,
-            "extraMargin": 10,
-            "boost": 5
-          },
-          "swipe": {
-            "durationTime": 250,
-            "lowLatency": false,
-            "extraMargin": 10,
-            "boost": 10
-          },
-          "gesture": {
-            "durationTime": 100,
+            "durationTime": 170,
             "lowLatency": false,
             "extraMargin": 5,
             "boost": 10
           },
-          "heavyload": {
-            "durationTime": 1000,
-            "lowLatency": false,
+          "swipe": {
+            "durationTime": 480,
+            "lowLatency": true,
             "extraMargin": 10,
-            "boost": 10
+            "boost": 15
+          },
+          "gesture": {
+            "durationTime": 440,
+            "lowLatency": true,
+            "extraMargin": 10,
+            "boost": 15
+          },
+          "heavyload": {
+            "durationTime": 930,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 15
           },
           "jank": {
             "durationTime": 100,
@@ -142,10 +142,10 @@
         }
       },
       "performance": {
-        "powerLimit": 4500,
-        "perfMargin": [10, 35, 40],
-        "upRateLatency": 200,
-        "overHeatTemp": 70,
+        "powerLimit": 4700,
+        "perfMargin": [10, 40, 45],
+        "upRateLatency": 70,
+        "overHeatTemp": 80,
         "burstCapacity": 20000,
         "recoverTime": 4000,
         "freqBurst": {

@@ -142,9 +142,9 @@
         }
       },
       "performance": {
-        "powerLimit": 4700,
-        "perfMargin": [15, 35, 40],
-        "upRateLatency": 200,
+        "powerLimit": 4900,
+        "perfMargin": [10, 40, 45],
+        "upRateLatency": 60,
         "overHeatTemp": 75,
         "burstCapacity": 20000,
         "recoverTime": 4000,
@@ -174,19 +174,19 @@
             "boost": 0
           },
           "heavyload": {
-            "durationTime": 1200,
+            "durationTime": 1400,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 28
+            "boost": 30
           },
           "jank": {
-            "durationTime": 530,
+            "durationTime": 570,
             "lowLatency": true,
-            "extraMargin": 0,
-            "boost": 40
+            "extraMargin": 5,
+            "boost": 30
           },
           "bigJank": {
-            "durationTime": 1000,
+            "durationTime": 1500,
             "lowLatency": true,
             "extraMargin": 15,
             "boost": 50
@@ -195,7 +195,7 @@
       },
       "fast": {
         "powerLimit": 10000,
-        "perfMargin": [30, 90, 90],
+        "perfMargin": [30, 100, 100],
         "upRateLatency": 0,
         "overHeatTemp": 95,
         "burstCapacity": 0,
