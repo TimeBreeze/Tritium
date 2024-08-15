@@ -142,8 +142,8 @@
         }
       },
       "performance": {
-        "powerLimit": 4900,
-        "perfMargin": [10, 40, 45],
+        "powerLimit": 4800,
+        "perfMargin": [10, 20, 75],
         "upRateLatency": 60,
         "overHeatTemp": 75,
         "burstCapacity": 20000,
