@@ -21,7 +21,7 @@ cp -f $MODPATH/powercfg/powercfg.sh /data/
 ui_print "- Tritium Scheduler Module"
 ui_print "- Installing..."
 
-echo "- 当前版本为: V4.3.1正式版"
+echo "- 当前版本为: V4.3.2正式版"
 echo "- Soc平台:$(getprop Build.BRAND)"
 echo "- CPU型号:$(getprop ro.board.platform)"
 echo "- 手机代号:$(getprop ro.product.board)"
@@ -317,10 +317,10 @@ if [ -e ${MODPATH}/configs/${config_name}.json ]; then
     cp -f ${MODPATH}/configs/${config_name}.json ${MODPATH}/config.json
     rm -rf ${MODPATH}/configs/
 
-    ui_print "- ${platform_name} is supported."
+    ui_print "- ${platform_name} 您的芯片已适配😋."
     ui_print "- install finished."
 else
-    ui_print "- ${platform_name} is unsupported."
+    ui_print "- ${platform_name} 您的芯片未适配😑."
     abort "- Abort!"
 fi
 
