@@ -1,51 +1,66 @@
-name:  Release
+name: Release
 
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
     name: Create Release
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v4
-    - name: Prepare Configuration
-      run: |
-        CONFIG_ENV=$(cat config.env | grep -w "CONFIG_ENV" | head -n 1 | cut -d "=" -f 2)
-        echo "MODULE_PACKAGING_PATH=$(cat $CONFIG_ENV | grep -w "MODULE_PACKAGING_PATHE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-        echo "ZIP_FILENAME=$(cat $CONFIG_ENV | grep -w "ZIP_FILENAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-        echo "CONFIG_PATH=$(cat $CONFIG_ENV | grep -w "CONFIG_PATH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-        echo "CONFIG_NAME=$(cat $CONFIG_ENV | grep -w "CONFIG_NAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-        echo "IS_PRERELEASE=$(cat $CONFIG_ENV | grep -w "IS_PRERELEASE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-        echo "VERSION=$(cat $CONFIG_ENV | grep -w "VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-        echo "RELEASE_NOTES=$(cat $CONFIG_ENV | grep -w "RELEASE_NOTES" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-    
-      # 压缩打包文件
-    - name: Zip Module
-      run: |
-        cd $GITHUB_WORKSPACE/magisk
-        zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME ./*
-        cd configs
-        zip -r $GITHUB_WORKSPACE/$CONFIG_NAME ./*
-        cd ../../.
-        ls -al
+      - uses: actions/checkout@v4
+      - name: Prepare Configuration
+        run: |
+          CONFIG_ENV=$(cat config.env | grep -w "CONFIG_ENV" | head -n 1 | cut -d "=" -f 2)
+          echo "MODULE_PACKAGING_PATH=$(cat $CONFIG_ENV | grep -w "MODULE_PACKAGING_PATHE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "ZIP_FILENAME=$(cat $CONFIG_ENV | grep -w "ZIP_FILENAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "CONFIG_PATH=$(cat $CONFIG_ENV | grep -w "CONFIG_PATH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "CONFIG_NAME=$(cat $CONFIG_ENV | grep -w "CONFIG_NAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "IS_PRERELEASE=$(cat $CONFIG_ENV | grep -w "IS_PRERELEASE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "VERSION=$(cat $CONFIG_ENV | grep -w "VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "RELEASE_NOTES=$(cat $CONFIG_ENV | grep -w "RELEASE_NOTES" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "FILE=$(cat $CONFIG_ENV | grep -w "FILE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
+          echo "VERSIONCODE=$(cat $CONFIG_ENV | grep -w "VERSIONCODE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
 
-    - name: Release
-      uses: softprops/action-gh-release@v2
-      env:
+      - name: update_version
+        run: |
+          sed -i "s/V[0-9]\.[0-9]\.[0-9]/$VERSION/" "$FILE"
+          sed -i "s/\"versionCode\": [0-9]*/\"versionCode\": $VERSION_CODE/" "$FILE"
+          sed -i "s/versionCode=[0-9]*/versionCode=$VERSION_CODE/" "./magisk/module.prop"
+
+      - name: Zip Module
+        run: |
+          cd $GITHUB_WORKSPACE/magisk
+          zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME_$VERSION ./*
+          cd configs
+          zip -r $GITHUB_WORKSPACE/$CONFIG_NAME_$VERSION ./*
+          cd ../../.
+          ls -al
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
-      with:
-        tag_name: ${{ env.VERSION }}
-        name: Tritium_${{ env.VERSION }}
-        prerelease: ${{ env.IS_PRERELEASE }}
-        body: ${{ env.RELEASE_NOTES }}
+        with:
+          tag_name: ${{ env.VERSION }}
+          body_path: ${{ github.workspace }}/changelog.md
+          name: Tritium_${{ env.VERSION }}
+          prerelease: ${{ env.IS_PRERELEASE }}
+          body: ${{ env.RELEASE_NOTES }}
 
-        files: ./*.zip
-        repository: TimeBreeze/Tritium
+          files: ./*.zip
+          repository: TimeBreeze/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
-        token: ${{ secrets.CUSTOM_GITHUB_TOKEN }} 
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+
+      - name: Push
+        run: |
+            git checkout -b file
+            git  add $ZIP_FILENAME_$VERSION.zip changelog.md Tritium.json
+            git commit -m "$VERSION"  
+            git push -f origin file
 
     

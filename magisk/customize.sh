@@ -5,14 +5,11 @@ SKIPMOUNT=false
 PROPFILE=true
 POSTFSDATA=true
 LATESTARTSERVICE=true
-set_perm_recursive $MODPATH 0 0 0755 0644
-set_perm $MODPATH/CuAttach 0 0 0755
 
-sh modules/modules.sh
+set_perm_recursive $MODPATH 0 0 0755 0644
 
 rm -rf /data/powercfg.json
 rm -rf /data/powercfg.sh
-
 
 cp -f $MODPATH/powercfg/powercfg.json /data/
 cp -f $MODPATH/powercfg/powercfg.sh /data/
@@ -29,7 +26,15 @@ echo "- 安卓版本:$(getprop ro.build.version.release)"
 echo "- SDK:$(getprop ro.build.version.sdk)"
 echo "- 内核版本:$(cat /proc/version)"
 
+string="$(cat /proc/version)"
+patterns=("Pandora" "Yuni" "Angel")
 
+for pattern in "${patterns[@]}"; do
+    if [[ "$string" == *"$pattern"* ]]; then
+        echo "当前内核不支持安装'$pattern'."
+        break
+    fi
+done
 
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
 chmod -R 0777 $MODPATH
