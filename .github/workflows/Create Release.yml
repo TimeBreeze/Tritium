@@ -55,7 +55,7 @@ jobs:
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
-          
+
       - name: Git Configuration
         run: |
           git config --global core.quotePath false
@@ -66,7 +66,7 @@ jobs:
       - name: Push
         run: |
             git checkout -b file
-            git  add $ZIP_FILENAME_$VERSION.zip changelog.md Tritium.json
+            git  add ${ZIP_FILENAME}_${VERSION}.zip changelog.md Tritium.json
             git commit -m "$VERSION"  
             git push -f origin file
 
