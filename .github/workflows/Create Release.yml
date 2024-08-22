@@ -33,9 +33,9 @@ jobs:
       - name: Zip Module
         run: |
           cd $GITHUB_WORKSPACE/magisk
-          zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME_$VERSION ./*
+          zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME_$VERSION.zip ./*
           cd configs
-          zip -r $GITHUB_WORKSPACE/$CONFIG_NAME_$VERSION ./*
+          zip -r $GITHUB_WORKSPACE/$CONFIG_NAME_$VERSION.zip ./*
           cd ../../.
           ls -al
 
