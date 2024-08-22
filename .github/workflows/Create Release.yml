@@ -62,6 +62,8 @@ jobs:
           git config --global core.autocrlf false
           git config --global core.safecrlf true
           git config --global core.ignorecase false 
+          git config --global user.name "NightRainMilkyWay"
+          git config --global user.email "NightRainMilkyWay@gmail.com"
 
       - name: Push
         run: |
