@@ -33,9 +33,9 @@ jobs:
       - name: Zip Module
         run: |
           cd $GITHUB_WORKSPACE/magisk
-          zip -r $GITHUB_WORKSPACE/$ZIP_FILENAME_$VERSION.zip ./*
+          zip -r $GITHUB_WORKSPACE/${ZIP_FILENAME}_${VERSION}.zip ./*
           cd configs
-          zip -r $GITHUB_WORKSPACE/$CONFIG_NAME_$VERSION.zip ./*
+          zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_${VERSION}.zip ./*
           cd ../../.
           ls -al
 
@@ -55,6 +55,13 @@ jobs:
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          
+      - name: Git Configuration
+        run: |
+          git config --global core.quotePath false
+          git config --global core.autocrlf false
+          git config --global core.safecrlf true
+          git config --global core.ignorecase false 
 
       - name: Push
         run: |
