@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Scheduler
-version=V4.3.2
-versionCode=240821
+version=V4.3.5
+versionCode=240825
 author=Suni
 description=Power By CuprumTrubo
 updateJson=https://file.tritium.nightrainmilkyway.cn/Tritium.json

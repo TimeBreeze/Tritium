@@ -18,7 +18,8 @@ cp -f $MODPATH/powercfg/powercfg.sh /data/
 ui_print "- Tritium Scheduler Module"
 ui_print "- Installing..."
 
-echo "- 当前版本为: V4.3.2正式版"
+echo "- 当前版本为: V4.3.5正式版"
+echo "- 构建时间:$(stat -c %y $MODPATH/module.prop | cut -d: -f1,2)"
 echo "- Soc平台:$(getprop Build.BRAND)"
 echo "- CPU型号:$(getprop ro.board.platform)"
 echo "- 手机代号:$(getprop ro.product.board)"
