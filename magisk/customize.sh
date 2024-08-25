@@ -27,15 +27,6 @@ echo "- 安卓版本:$(getprop ro.build.version.release)"
 echo "- SDK:$(getprop ro.build.version.sdk)"
 echo "- 内核版本:$(cat /proc/version)"
 
-string="$(cat /proc/version)"
-patterns=("Pandora" "Yuni" "Angel")
-
-for pattern in "${patterns[@]}"; do
-    if [[ "$string" == *"$pattern"* ]]; then
-        echo "当前内核不支持安装'$pattern'."
-        break
-    fi
-done
 
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
 chmod -R 0777 $MODPATH
