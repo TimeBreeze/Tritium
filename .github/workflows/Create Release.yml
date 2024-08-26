@@ -27,7 +27,8 @@ jobs:
       - name: update_version
         run: |
           sed -i "s/V[0-9]\.[0-9]\.[0-9]/$VERSION/" "$FILE"
-          sed -i "s/\"versionCode\": [0-9]*/\"versionCode\": $VERSION_CODE/" "$FILE"
+          sed -i "s/version=V[0-9]\.[0-9]\.[0-9]/version=$VERSION/" "./magisk/module.prop"
+          sed -i "s/versionCode\": [0-9]*,/versionCode\": $VERSION_CODE,/g" "$FILE"
           sed -i "s/versionCode=[0-9]*/versionCode=$VERSION_CODE/" "./magisk/module.prop"
 
       - name: Zip Module
@@ -67,9 +68,10 @@ jobs:
 
       - name: Push
         run: |
-            git checkout -b file
-            git  add ${ZIP_FILENAME}_${VERSION}.zip changelog.md Tritium.json
+            rm -rf ./*.zip
+            git checkout  main
+            git add -A
             git commit -m "$VERSION"  
-            git push -f origin file
+            git push -f origin main
 
     
