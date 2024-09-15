@@ -38,7 +38,7 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 1500,
+        "powerLimit": 2100,
         "perfMargin": [10, 10, 10],
         "upRateLatency": 600,
         "overHeatTemp": 55,

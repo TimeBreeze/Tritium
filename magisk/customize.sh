@@ -11,7 +11,6 @@ set_perm_recursive $MODPATH 0 0 0755 0644
 rm -rf /data/powercfg.json
 rm -rf /data/powercfg.sh
 
-
 cp -f $MODPATH/powercfg/powercfg.json /data/
 cp -f $MODPATH/powercfg/powercfg.sh /data/
 
@@ -19,20 +18,15 @@ cp -f $MODPATH/powercfg/powercfg.sh /data/
 ui_print "- Tritium Scheduler Module"
 ui_print "- Installing..."
 
-ui_print "- 当前版本为: $(grep '^version=' module.prop | cut -d'=' -f2)"
-ui_print "- 构建时间:$(stat -c %y $MODPATH/module.prop | cut -d: -f1,2)"
-ui_print "- CPU型号:$(getprop ro.board.platform)"
-ui_print "- 手机代号:$(getprop ro.product.board)"
-ui_print "- 安卓版本:$(getprop ro.build.version.release)"
+echo "- 当前版本为: V4.3.7正式版"
+echo "- 构建时间:$(stat -c %y $MODPATH/module.prop | cut -d: -f1,2)"
+echo "- Soc平台:$(getprop Build.BRAND)"
+echo "- CPU型号:$(getprop ro.board.platform)"
+echo "- 手机代号:$(getprop ro.product.board)"
+echo "- 安卓版本:$(getprop ro.build.version.release)"
+echo "- SDK:$(getprop ro.build.version.sdk)"
+echo "- 内核版本:$(cat /proc/version)"
 
-
-arr="Pandora Yuni Angel"
-string="$(cat "/proc/version")"
-for item in $arr; do
-    if echo "$string" | grep -q "$item"; then
-        abort "内核不兼容，终止安装"
-    fi
-done
 
 unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
 chmod -R 0777 $MODPATH
@@ -42,19 +36,19 @@ function get_taro_name() {
     gpu_max_freq=$(cat /sys/class/kgsl/kgsl-3d0/max_clock_mhz)
     # SDM8+GEN1: 2.0+2.75+3.19 SDM8GEN1/8+GEN1UC: 1.8+2.5+3.0 SDM7+GEN2: 1.8+2.5+2.91.
     if [ $cpu7_max_freq -gt 3100000 ]; then
-        ui_print "sdm8+gen1"
+        echo "sdm8+gen1"
     elif [ $cpu7_max_freq -gt 2950000 ]; then
         if [ $gpu_max_freq -gt 850 ]; then
             # Adreno730 @ 900MHz
-            ui_print "sdm8+gen1"
+            echo "sdm8+gen1"
         else
             # Adreno730 @ 818MHz
-            ui_print "sdm8gen1"
+            echo "sdm8gen1"
         fi
     elif [ $cpu7_max_freq -gt 2900000 ]; then
-        ui_print "sdm7+gen2"
+        echo "sdm7+gen2"
     else
-        ui_print "sdm7gen1"
+        echo "sdm7gen1"
     fi
 }
 
@@ -62,63 +56,63 @@ function get_lahaina_name() {
     cpu7_max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
     cpu4_max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq)
     if [ $cpu7_max_freq -gt 2800000 ]; then
-        ui_print "sdm888"
+        echo "sdm888"
     elif [ $cpu4_max_freq -gt 2300000 ]; then
-        ui_print "sdm778"
+        echo "sdm778"
     else
-        ui_print "sdm780"
+        echo "sdm780"
     fi
 }
 
 function get_lito_name() {
     cpu_max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
     if [ $cpu_max_freq -gt 2300000 ]; then
-        ui_print "sdm765"
+        echo "sdm765"
     else
-        ui_print "sdm750"
+        echo "sdm750"
     fi
 }
 
 function get_sm6150_name() {
     cpu_max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
     if [ $cpu_max_freq -gt 2200000 ]; then
-        ui_print "sdm730"
+        echo "sdm730"
     else
-        ui_print "sdm675"
+        echo "sdm675"
     fi
 }
 
 function get_mt6895_name() {
     cpu_max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
     if [ $cpu_max_freq -gt 3000000 ]; then
-        ui_print "dimensity8200"
+        echo "dimensity8200"
     else
-        ui_print "dimensity8100"
+        echo "dimensity8100"
     fi
 }
 
 function get_bengal_name() {
     cpu_max_freq=$(cat /sys/devices/system/cpu/cpufreq/policy7/cpuinfo_max_freq)
     if [ $cpu_max_freq -gt 2300000 ]; then
-        ui_print "sdm680"
+        echo "sdm680"
     else
-        ui_print "sdm665"
+        echo "sdm665"
     fi
 }
 
 function get_config_name() {
     case "$1" in
     pineapple*)
-        ui_print "sdm8gen3"
+        echo "sdm8gen3"
         ;;
     sunstone*)
-        ui_print "sdm4gen1"
+        echo "sdm4gen1"
         ;;
     sky*)
-        ui_print "sdm4gen2"
+        echo "sdm4gen2"
         ;;
     kalama*)
-        ui_print "sdm8gen2"
+        echo "sdm8gen2"
         ;;
     taro*)
         get_taro_name
@@ -134,44 +128,44 @@ function get_config_name() {
         get_lahaina_name
         ;;
     kona*)
-        ui_print "sdm865"
+        echo "sdm865"
         ;;
     msmnile*)
-        ui_print "sdm855"
+        echo "sdm855"
         ;;
     sdm845*)
-        ui_print "sdm845"
+        echo "sdm845"
         ;;
     lito*)
         get_lito_name
         ;;
     sm7150*)
-        ui_print "sdm730"
+        echo "sdm730"
         ;;
     sm6150*)
         get_sm6150_name
         ;;
     sdm710*)
-        ui_print "sdm710"
+        echo "sdm710"
         ;;
     sdm450*)
-        ui_print "sdm625"
+        echo "sdm625"
         ;;
     sdm4350*)
         # snapdragon 480
-        ui_print "sdm730"
+        echo "sdm730"
         ;;
     msm8953*)
-        ui_print "sdm625"
+        echo "sdm625"
         ;;
     sdm660*)
-        ui_print "sdm660"
+        echo "sdm660"
         ;;
     sdm636*)
-        ui_print "sdm660"
+        echo "sdm660"
         ;;
     trinket*)
-        ui_print "sdm665"
+        echo "sdm665"
         ;;
     bengal*)
         # snapdragon 665/460/680
@@ -179,136 +173,136 @@ function get_config_name() {
         ;;
     holi*)
         # snapdragon 695
-        ui_print "sdm4gen1"
+        echo "sdm4gen1"
         ;;
     msm8998*)
-        ui_print "sdm835"
+        echo "sdm835"
         ;;
     msm8996*)
-        ui_print "sdm820"
+        echo "sdm820"
         ;;
     universal9925*)
-        ui_print "exynos2200"
+        echo "exynos2200"
         ;;
     universal2100*)
-        ui_print "exynos2100"
+        echo "exynos2100"
         ;;
     universal1080*)
-        ui_print "exynos1080"
+        echo "exynos1080"
         ;;
     universal990*)
-        ui_print "exynos990"
+        echo "exynos990"
         ;;
     universal9825*)
-        ui_print "exynos9825"
+        echo "exynos9825"
         ;;
     universal9820*)
-        ui_print "exynos9820"
+        echo "exynos9820"
         ;;
     mt6771*)
         # Helio P60/P70
-        ui_print "helio_p60"
+        echo "helio_p60"
         ;;
     mt6779*)
         # Helio P90
-        ui_print "helio_g80"
+        echo "helio_g80"
         ;;
     mt6762*)
         # Helio G25/P22
-        ui_print "helio_p35"
+        echo "helio_p35"
         ;;
     mt6765*)
         # Helio G35/P35
-        ui_print "helio_p35"
+        echo "helio_p35"
         ;;
     mt6768*)
-        ui_print "helio_g80"
+        echo "helio_g80"
         ;;
     mt6785*)
-        ui_print "helio_g90"
+        echo "helio_g90"
         ;;
     mt6789*)
-        ui_print "helio_g99"
+        echo "helio_g99"
         ;;
     mt6833*)
-        ui_print "dimensity700"
+        echo "dimensity700"
         ;;
     mt6853*)
-        ui_print "dimensity700"
+        echo "dimensity700"
         ;;
     mt6873*)
-        ui_print "dimensity820"
+        echo "dimensity820"
         ;;
     mt6875*)
-        ui_print "dimensity820"
+        echo "dimensity820"
         ;;
     mt6877*)
-        ui_print "dimensity900"
+        echo "dimensity900"
         ;;
     mt6885*)
-        ui_print "dimensity1000"
+        echo "dimensity1000"
         ;;
     mt6886*)
-        ui_print "dimensity7200"
+        echo "dimensity7200"
         ;;
     mt6889*)
-        ui_print "dimensity1000"
+        echo "dimensity1000"
         ;;
     mt6891*)
-        ui_print "dimensity1100"
+        echo "dimensity1100"
         ;;
     mt6893*)
-        ui_print "dimensity1100"
+        echo "dimensity1100"
         ;;
     mt6895*)
         # Dimensity8200 also named mt6895(k6895v1_64)
         get_mt6895_name
         ;;
     mt6983*)
-        ui_print "dimensity9000"
+        echo "dimensity9000"
         ;;
     mt6985*)
-        ui_print "dimensity9200"
+        echo "dimensity9200"
         ;;
     mt6989*)
-        ui_print "dimensity9300"
+        echo "dimensity9300"
         ;;
     kirin970*)
-        ui_print "kirin970"
+        echo "kirin970"
         ;;
     hi3670*)
-        ui_print "kirin970"
+        echo "kirin970"
         ;;
     hi3660*)
-        ui_print "kirin960"
+        echo "kirin960"
         ;;
     hi3650*)
-        ui_print "kirin950"
+        echo "kirin950"
         ;;
     kirin710*)
-        ui_print "kirin710"
+        echo "kirin710"
         ;;
     hi6250*)
-        ui_print "kirin650"
+        echo "kirin650"
         ;;
     sp9863a*)
-        ui_print "sc9863a"
+        echo "sc9863a"
         ;;
     ums512*)
-        ui_print "unisoc_t618"
+        echo "unisoc_t618"
         ;;
     ud710*)
-        ui_print "unisoc_t740"
+        echo "unisoc_t740"
         ;;
     ums9620*)
-        ui_print "unisoc_t770"
+        echo "unisoc_t770"
         ;;
     ums9230*)
         # Unisoc T606
-        ui_print "unisoc_t618"
+        echo "unisoc_t618"
         ;;
     *)
-        ui_print "universal"
+        echo "universal"
         ;;
     esac
 }
