@@ -11,4 +11,4 @@ git add -A
 git commit -m "$input"
 
 # 推送到远程的main分支
-git push origin main
+git push -f origin main
