@@ -38,12 +38,12 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 2100,
+        "powerLimit": 1500,
         "perfMargin": [10, 10, 10],
         "upRateLatency": 600,
         "overHeatTemp": 55,
-        "burstCapacity": 12000,
-        "recoverTime": 4000,
+        "burstCapacity": 9000,
+        "recoverTime": 5000,
         "freqBurst": {
           "none": {
             "durationTime": 0,
@@ -90,11 +90,11 @@
         }
       },
       "balance": {
-        "powerLimit": 3000,
-        "perfMargin": [15, 20, 25],
+        "powerLimit": 2700,
+        "perfMargin": [10, 15, 20],
         "upRateLatency": 410,
-        "overHeatTemp": 65,
-        "burstCapacity": 16000,
+        "overHeatTemp": 60,
+        "burstCapacity": 13000,
         "recoverTime": 4000,
         "freqBurst": {
           "none": {
@@ -143,11 +143,11 @@
       },
       "performance": {
         "powerLimit": 4900,
-        "perfMargin": [10, 25, 75],
-        "upRateLatency": 60,
-        "overHeatTemp": 80,
-        "burstCapacity": 20000,
-        "recoverTime": 4000,
+        "perfMargin": [10, 20, 50],
+        "upRateLatency": 100,
+        "overHeatTemp": 70,
+        "burstCapacity": 17000,
+        "recoverTime": 4600,
         "freqBurst": {
           "none": {
             "durationTime": 0,
@@ -177,19 +177,19 @@
             "durationTime": 1200,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 30
+            "boost": 25
           },
           "jank": {
-            "durationTime": 530,
+            "durationTime": 600,
             "lowLatency": true,
             "extraMargin": 10,
-            "boost": 40
+            "boost": 15
           },
           "bigJank": {
-            "durationTime": 1100,
+            "durationTime": 1300,
             "lowLatency": true,
             "extraMargin": 15,
-            "boost": 55
+            "boost": 25
           }
         }
       },

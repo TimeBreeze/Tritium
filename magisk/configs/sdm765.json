@@ -38,7 +38,7 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 2300,
+        "powerLimit": 1500,
         "perfMargin": [10, 10, 10],
         "upRateLatency": 600,
         "overHeatTemp": 60,
@@ -142,12 +142,12 @@
         }
       },
       "performance": {
-        "powerLimit": 4800,
-        "perfMargin": [10, 20, 75],
-        "upRateLatency": 60,
+        "powerLimit": 4600,
+        "perfMargin": [10, 20, 55],
+        "upRateLatency": 100,
         "overHeatTemp": 75,
-        "burstCapacity": 20000,
-        "recoverTime": 4000,
+        "burstCapacity": 17000,
+        "recoverTime": 4300,
         "freqBurst": {
           "none": {
             "durationTime": 0,
