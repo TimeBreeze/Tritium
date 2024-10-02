@@ -1,16 +1,6 @@
 {
   "versionCode": ,
-<<<<<<< HEAD
   "version": "V4.5.0",
   "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/V4.5.0/Magisk_V4.5.0.zip",
-=======
-<<<<<<< HEAD
-  "version": "V4.5.0",
-  "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/V4.5.0/Magisk_V4.4.2.zip",
-=======
-  "version": "V4.5.0",
-  "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/V4.5.0/Magisk_V4.3.6.zip",
->>>>>>> cc471f25e1f756a1e56e160c082d4e68eb8ca1d5
->>>>>>> bc9ad36cc76c27f092c03441b349211daef04b3a
   "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
 }
