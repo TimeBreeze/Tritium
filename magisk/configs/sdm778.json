@@ -180,16 +180,16 @@
             "boost": 30
           },
           "jank": {
-            "durationTime": 500,
+            "durationTime": 100,
             "lowLatency": true,
-            "extraMargin": 10,
+            "extraMargin": 0,
             "boost": 40
           },
           "bigJank": {
-            "durationTime": 1340,
+            "durationTime": 200,
             "lowLatency": true,
-            "extraMargin": 20,
-            "boost": 50
+            "extraMargin": 0,
+            "boost": 60
           }
         }
       },

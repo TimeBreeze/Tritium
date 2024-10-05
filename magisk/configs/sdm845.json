@@ -178,7 +178,7 @@
             "boost": 40
           },
           "bigJank": {
-            "durationTime": 1400,
+            "durationTime": 1300,
             "lowLatency": true,
             "extraMargin": 20,
             "boost": 55
