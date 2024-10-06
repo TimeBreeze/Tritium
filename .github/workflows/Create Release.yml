@@ -24,12 +24,25 @@ jobs:
           echo "FILE=$(cat $CONFIG_ENV | grep -w "FILE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "VERSIONCODE=$(cat $CONFIG_ENV | grep -w "VERSIONCODE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
 
-      - name: update_version
+      - name: Update VERSION
         run: |
-          sed -i "s/V[0-9]\.[0-9]\.[0-9]/$VERSION/" "$FILE"
-          sed -i "s/version=V[0-9]\.[0-9]\.[0-9]/version=$VERSION/" "./magisk/module.prop"
-          sed -i "s/versionCode\": [0-9]*,/versionCode\": $VERSION_CODE,/g" "$FILE"
-          sed -i "s/versionCode=[0-9]*/versionCode=$VERSION_CODE/" "./magisk/module.prop"
+          echo '{
+            "versionCode": ${ERSIONCODE},  
+            "version": "${VERSION}",
+            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/${VERSION}/Magisk_${VERSION}.zip",
+            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
+          }' > Tritium.json
+
+          echo '{
+            id=ct_module
+            name=Tritium Scheduler
+            version=${ERSIONCODE}
+            versionCode=
+            author=Suni
+            description=Power By CuprumTrubo
+            updateJson=https://file.tritium.nightrainmilkyway.cn/Tritium.json
+          }' > ./magisk/module.prop
+          
 
       - name: Zip Module
         run: |
@@ -38,7 +51,6 @@ jobs:
           cd configs
           zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_${VERSION}.zip ./*
           cd ../../.
-          ls -al
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -57,21 +69,14 @@ jobs:
           # with permissions to create releases in the other repo
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
-      - name: Git Configuration
+      - name: Push_changes
         run: |
-          git config --global core.quotePath false
-          git config --global core.autocrlf false
-          git config --global core.safecrlf true
-          git config --global core.ignorecase false 
-          git config --global user.name "NightRainMilkyWay"
-          git config --global user.email "NightRainMilkyWay@gmail.com"
-
-      - name: Push
-        run: |
-            rm -rf ./*.zip
-            git checkout  main
-            git add -A
-            git commit -m "$VERSION"  
-            git push -f origin main
+          rm -rf ./*.zip
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add your-workflow-file.yml
+          git commit -m "Update workflow file"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/your-username/your-repo.git HEAD:your-branch-name
+        
 
     
