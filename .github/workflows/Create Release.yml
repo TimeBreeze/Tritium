@@ -72,7 +72,6 @@ jobs:
       - name: 同步 repo
         run: |
           rm -rf ./*.zip
-          cd clones/org/repo1
           bash -c 'if [ $(git status --porcelain | wc -l) -eq 0 ]; then
             echo "工作树无变更，跳过提交步骤..."
           else
