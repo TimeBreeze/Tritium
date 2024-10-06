@@ -34,7 +34,7 @@ jobs:
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
             "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_'"${VERSION}"'.zip",
-            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
+            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/changelog.md"
           }' > Tritium.json
           
           # 创建 module.prop 文件
