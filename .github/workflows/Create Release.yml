@@ -76,7 +76,7 @@ jobs:
           git config user.email "action@github.com"
           git add .
           git commit -m "Update HADE"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/your-username/your-repo.git HEAD:your-branch-name
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}git@github.com:TimeBreeze/Tritium.git main
         
 
     
