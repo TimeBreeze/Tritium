@@ -90,7 +90,7 @@
         }
       },
       "balance": {
-        "powerLimit": 3000,
+        "powerLimit": 2800,
         "perfMargin": [10, 15, 25],
         "upRateLatency": 410,
         "overHeatTemp": 65,
