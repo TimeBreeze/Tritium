@@ -1,7 +1,7 @@
 {
   id=ct_module
   name=Tritium Scheduler
-  version=${ERSIONCODE}
+  version=${VERSIONCODE}
   versionCode=
   author=Suni
   description=Power By CuprumTrubo

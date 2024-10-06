@@ -1,5 +1,5 @@
 {
-  "versionCode": ${ERSIONCODE},  
+  "versionCode": ${VERSIONCODE},  
   "version": "${VERSION}",
   "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/${VERSION}/Magisk_${VERSION}.zip",
   "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
