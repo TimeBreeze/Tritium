@@ -28,22 +28,26 @@ jobs:
         run: |
           VERSIONCODE="${{ env.VERSIONCODE }}"
           VERSION="${{ env.VERSION }}"
+          
+          # 创建 Tritium.json 文件
           echo '{
-            "versionCode": ${VERSIONCODE},  
-            "version": "${VERSION}",
-            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/${VERSION}/Magisk_${VERSION}.zip",
-            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
+            "versionCode": '"${VERSIONCODE}"',
+            "version": "'"${VERSION}"'",
+            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_'"${VERSION}"'.zip",
+            "changelog": "https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
           }' > Tritium.json
-
+          
+          # 创建 module.prop 文件
           echo '{
             id=ct_module
             name=Tritium Scheduler
-            version=${VERSIONCODE}
+            version='"${VERSIONCODE}"'
             versionCode=
             author=Suni
             description=Power By CuprumTrubo
             updateJson=https://file.tritium.nightrainmilkyway.cn/Tritium.json
           }' > ./magisk/module.prop
+
           
 
       - name: Zip Module
