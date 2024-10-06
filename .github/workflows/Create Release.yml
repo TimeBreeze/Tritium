@@ -39,12 +39,12 @@ jobs:
           
           # 创建 module.prop 文件
           echo 'id=ct_module
-            name=Tritium Scheduler
-            version='"${VERSIONCODE}"'
-            versionCode='"${VERSION}"'
-            author=Suni
-            description=Power By CuprumTrubo
-            updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
+          name=Tritium Scheduler
+          version='"${VERSIONCODE}"'
+          versionCode='"${VERSION}"'
+          author=Suni
+          description=Power By CuprumTrubo
+          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
           ' > ./magisk/module.prop
 
           
