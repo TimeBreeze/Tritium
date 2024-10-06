@@ -33,8 +33,8 @@ jobs:
           echo '{
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_'"${VERSION}"'.zip",
-            "changelog": "https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
+            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_'"${VERSION}"'.zip",
+            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json"
           }' > Tritium.json
           
           # 创建 module.prop 文件
@@ -42,10 +42,10 @@ jobs:
             id=ct_module
             name=Tritium Scheduler
             version='"${VERSIONCODE}"'
-            versionCode=
+            versionCode='"${VERSION}"'
             author=Suni
             description=Power By CuprumTrubo
-            updateJson=https://file.tritium.nightrainmilkyway.cn/Tritium.json
+            updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
           }' > ./magisk/module.prop
 
           
