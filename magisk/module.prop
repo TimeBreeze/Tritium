@@ -1,7 +1,9 @@
-id=ct_module
-name=Tritium Scheduler
-version=V4.5.2
-versionCode=
-author=Suni
-description=Power By CuprumTrubo
-updateJson=https://file.tritium.nightrainmilkyway.cn/Tritium.json
+{
+  id=ct_module
+  name=Tritium Scheduler
+  version=${ERSIONCODE}
+  versionCode=
+  author=Suni
+  description=Power By CuprumTrubo
+  updateJson=https://file.tritium.nightrainmilkyway.cn/Tritium.json
+}
