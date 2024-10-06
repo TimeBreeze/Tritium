@@ -77,6 +77,21 @@ jobs:
           git add .
           git commit -m "Update HADE"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}git@github.com:TimeBreeze/Tritium.git main
-        
 
-    
+
+      - name: 同步 repo
+        run: |
+          rm -rf ./*.zip
+          cd clones/org/repo1
+          bash -c 'if [ $(git status --porcelain | wc -l) -eq 0 ]; then
+            echo "工作树无变更，跳过提交步骤..."
+          else
+            echo "提交文件中..."
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "chore(generated): GitHub Actions Bot 提交的记录"
+            git log -3 --oneline
+            echo "推送更新中..."
+            git push
+          fi'
