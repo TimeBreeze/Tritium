@@ -69,16 +69,6 @@ jobs:
           # with permissions to create releases in the other repo
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
-      - name: Push_changes
-        run: |
-          rm -rf ./*.zip
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
-          git add .
-          git commit -m "Update HADE"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}git@github.com:TimeBreeze/Tritium.git main
-
-
       - name: 同步 repo
         run: |
           rm -rf ./*.zip
