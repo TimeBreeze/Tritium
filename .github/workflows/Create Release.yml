@@ -74,8 +74,8 @@ jobs:
           rm -rf ./*.zip
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add your-workflow-file.yml
-          git commit -m "Update workflow file"
+          git add .
+          git commit -m "Update HADE"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/your-username/your-repo.git HEAD:your-branch-name
         
 
