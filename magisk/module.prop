@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Scheduler(Beta)
-version=V2.0.0
-versionCode=240927
+version=V2.0.2
+versionCode=241010
 author=Suni
 description=Power by CuprumTurbo Scheduler
-updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
+updateJson=https://github.com/TimeBreeze/Tritium/blob/dev/Tritium.json
