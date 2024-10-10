@@ -84,7 +84,7 @@
       "balance": {
         "powerLimit": 3000,
         "perfMargin": [25, 30],
-        "upRateLatency": 380,
+        "upRateLatency": 400,
         "overHeatTemp": 65,
         "burstCapacity": 16000,
         "recoverTime": 4000,
@@ -97,7 +97,7 @@
           },
           "tap": {
             "durationTime": 300,
-            "lowLatency": false,
+            "lowLatency": true,
             "extraMargin": 10,
             "boost": 15
           },

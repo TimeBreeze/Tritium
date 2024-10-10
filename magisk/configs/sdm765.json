@@ -104,10 +104,10 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
-            "lowLatency": false,
-            "extraMargin": 20,
-            "boost": 0
+            "durationTime": 210,
+            "lowLatency": true,
+            "extraMargin": 10,
+            "boost": 15
           },
           "swipe": {
             "durationTime": 540,
