@@ -16,11 +16,9 @@ jobs:
           CONFIG_ENV=$(cat config.env | grep -w "CONFIG_ENV" | head -n 1 | cut -d "=" -f 2)
           echo "MODULE_PACKAGING_PATH=$(cat $CONFIG_ENV | grep -w "MODULE_PACKAGING_PATHE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "ZIP_FILENAME=$(cat $CONFIG_ENV | grep -w "ZIP_FILENAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "CONFIG_PATH=$(cat $CONFIG_ENV | grep -w "CONFIG_PATH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "CONFIG_NAME=$(cat $CONFIG_ENV | grep -w "CONFIG_NAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "IS_PRERELEASE=$(cat $CONFIG_ENV | grep -w "IS_PRERELEASE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "VERSION=$(cat $CONFIG_ENV | grep -w "VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "RELEASE_NOTES=$(cat $CONFIG_ENV | grep -w "RELEASE_NOTES" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "FILE=$(cat $CONFIG_ENV | grep -w "FILE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "VERSIONCODE=$(cat $CONFIG_ENV | grep -w "VERSIONCODE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
 
