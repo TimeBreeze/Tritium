@@ -30,9 +30,9 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 1500,
-        "perfMargin": [10, 10],
-        "upRateLatency": 600,
+        "powerLimit": 1900,
+        "perfMargin": [15, 15],
+        "upRateLatency": 550,
         "overHeatTemp": 60,
         "burstCapacity": 9000,
         "recoverTime": 5000,
@@ -56,10 +56,10 @@
             "boost": 15
           },
           "gesture": {
-            "durationTime": 100,
-            "lowLatency": false,
-            "extraMargin": 20,
-            "boost": 0
+            "durationTime": 460,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 15
           },
           "heavyload": {
             "durationTime": 1000,
