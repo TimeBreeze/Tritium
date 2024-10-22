@@ -195,7 +195,7 @@
       },
       "fast": {
         "powerLimit": 10000,
-        "perfMargin": [30, 90, 95],
+        "perfMargin": [30, 30, 30],
         "upRateLatency": 0,
         "overHeatTemp": 95,
         "burstCapacity": 0,
@@ -208,28 +208,28 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 420,
+            "durationTime": 100,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 20
+            "boost": 0
           },
           "swipe": {
-            "durationTime": 470,
+            "durationTime": 200,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 20
+            "boost": 0
           },
           "gesture": {
             "durationTime": 100,
             "lowLatency": false,
-            "extraMargin": 0,
-            "boost": 15
+            "extraMargin": 20,
+            "boost": 0
           },
           "heavyload": {
-            "durationTime": 1300,
+            "durationTime": 1000,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 40
+            "boost": 0
           },
           "jank": {
             "durationTime": 100,
