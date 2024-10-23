@@ -634,10 +634,10 @@
         "downRateDiff": 30
       },
       "fast": {
-        "maxFreq": 850,
-        "minFreq": 800,
-        "upRateThres": 20,
-        "downRateDiff": 20
+        "maxFreq": 780,
+        "minFreq": 630,
+        "upRateThres": 40,
+        "downRateDiff": 30
       }
     }
   },
