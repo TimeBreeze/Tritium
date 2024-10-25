@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Scheduler
-version=V4.7.5
-versionCode=241025
+version=V4.7.6
+versionCode=241026
 author=Suni
 description=Power By CuprumTrubo
 updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
