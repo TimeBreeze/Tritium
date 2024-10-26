@@ -1,6 +1,6 @@
 {
   "name": "Dimensity8000/8100",
-  "author": "Suni",
+  "author": "Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,

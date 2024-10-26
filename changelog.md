@@ -1,10 +1,6 @@
 更新日志:
-## 较大更新: 2024-10-25
-
-<img src="https://img.nightrainmilkyway.cn/img/202410231543636.png" style="width: 96px;" alt="logo">
-
-[![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/TimeBreeze/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
-- 增加kernelsu模块webui支持
-- 新增联发科`9200/9200+`配置文件
-- 解决了部分用户找不到文档的问题，现可以通过`kernelsu`模块的webui查看文档
-- 文档站点: https://tritium.nightrainmilkyway.cn
+- 优化 MTK9200省电模式的核心温控 功耗限制 整体流畅度
+- 优化 MTK9200均衡模式的性能冗余 核心温控 流畅度
+- 优化 MTK9200均衡模式的手势操作场景流畅度 并降低延迟
+- 改进 MTK9200性能模式的性能冗余 功耗限制
+- 优化 MTK9200性能模式的触控 滑动场景延迟

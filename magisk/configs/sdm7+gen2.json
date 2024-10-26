@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon7+Gen2",
-  "author": "Suni",
+  "author": "Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,

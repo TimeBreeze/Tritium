@@ -1,6 +1,6 @@
 {
   "name": "Dimensity9200/9200+",
-  "author": "NightRainMilkyWay",
+  "author": "Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -38,10 +38,10 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 250,
-        "perfMargin": [13, 15, 17],
+        "powerLimit": 1830,
+        "perfMargin": [13, 15, 18],
         "upRateLatency": 700,
-        "overHeatTemp": 95,
+        "overHeatTemp": 65,
         "burstCapacity": 9500,
         "recoverTime": 2500,
         "freqBurst": {
@@ -52,10 +52,10 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
-            "lowLatency": false,
-            "extraMargin": 20,
-            "boost": 0
+            "durationTime": 220,
+            "lowLatency": true,
+            "extraMargin": 10,
+            "boost": 10
           },
           "swipe": {
             "durationTime": 200,
@@ -90,10 +90,10 @@
         }
       },
       "balance": {
-        "powerLimit": 4300,
-        "perfMargin": [25, 27, 29],
-        "upRateLatency": 300,
-        "overHeatTemp": 95,
+        "powerLimit": 3100,
+        "perfMargin": [15, 20, 25],
+        "upRateLatency": 370,
+        "overHeatTemp": 70,
         "burstCapacity": 21500,
         "recoverTime": 4500,
         "freqBurst": {
@@ -104,22 +104,22 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
-            "lowLatency": false,
-            "extraMargin": 20,
-            "boost": 0
+            "durationTime": 220,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 15
           },
           "swipe": {
-            "durationTime": 200,
-            "lowLatency": false,
-            "extraMargin": 10,
-            "boost": 0
+            "durationTime": 260,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 15
           },
           "gesture": {
-            "durationTime": 100,
-            "lowLatency": false,
+            "durationTime": 540,
+            "lowLatency": true,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 20
           },
           "heavyload": {
             "durationTime": 1000,
@@ -142,10 +142,10 @@
         }
       },
       "performance": {
-        "powerLimit": 5000,
-        "perfMargin": [30, 30, 30],
-        "upRateLatency": 200,
-        "overHeatTemp": 90,
+        "powerLimit": 4500,
+        "perfMargin": [30, 30, 40],
+        "upRateLatency": 150,
+        "overHeatTemp": 80,
         "burstCapacity": 20000,
         "recoverTime": 4000,
         "freqBurst": {
@@ -156,16 +156,16 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
-            "lowLatency": false,
+            "durationTime": 240,
+            "lowLatency": true,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 15
           },
           "swipe": {
-            "durationTime": 200,
-            "lowLatency": false,
-            "extraMargin": 10,
-            "boost": 0
+            "durationTime": 310,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 15
           },
           "gesture": {
             "durationTime": 100,
@@ -174,22 +174,22 @@
             "boost": 0
           },
           "heavyload": {
-            "durationTime": 1000,
-            "lowLatency": false,
+            "durationTime": 1300,
+            "lowLatency": true,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 20
           },
           "jank": {
-            "durationTime": 100,
+            "durationTime": 600,
             "lowLatency": true,
-            "extraMargin": 0,
+            "extraMargin": 10,
             "boost": 40
           },
           "bigJank": {
-            "durationTime": 200,
+            "durationTime": 1400,
             "lowLatency": true,
-            "extraMargin": 0,
-            "boost": 60
+            "extraMargin": 20,
+            "boost": 50
           }
         }
       },

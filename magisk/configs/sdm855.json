@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon855/855+/860",
-  "author": "Suni",
+  "author": "Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
