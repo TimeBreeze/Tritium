@@ -144,7 +144,7 @@
       "performance": {
         "powerLimit": 4500,
         "perfMargin": [15, 20, 55],
-        "upRateLatency": 100,
+        "upRateLatency": 70,
         "overHeatTemp": 70,
         "burstCapacity": 17000,
         "recoverTime": 4300,
