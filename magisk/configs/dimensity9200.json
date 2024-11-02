@@ -52,22 +52,22 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 220,
+            "durationTime": 150,
             "lowLatency": true,
             "extraMargin": 10,
             "boost": 10
           },
           "swipe": {
-            "durationTime": 200,
-            "lowLatency": false,
+            "durationTime": 180,
+            "lowLatency": true,
             "extraMargin": 10,
-            "boost": 0
+            "boost": 15
           },
           "gesture": {
-            "durationTime": 100,
-            "lowLatency": false,
-            "extraMargin": 20,
-            "boost": 0
+            "durationTime": 460,
+            "lowLatency": true,
+            "extraMargin": 15,
+            "boost": 15
           },
           "heavyload": {
             "durationTime": 1000,
@@ -90,9 +90,9 @@
         }
       },
       "balance": {
-        "powerLimit": 3100,
-        "perfMargin": [15, 20, 25],
-        "upRateLatency": 370,
+        "powerLimit": 2800,
+        "perfMargin": [10, 15, 20],
+        "upRateLatency": 440,
         "overHeatTemp": 70,
         "burstCapacity": 21500,
         "recoverTime": 4500,
@@ -104,19 +104,19 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 220,
+            "durationTime": 170,
             "lowLatency": true,
             "extraMargin": 15,
             "boost": 15
           },
           "swipe": {
-            "durationTime": 260,
+            "durationTime": 190,
             "lowLatency": true,
             "extraMargin": 15,
             "boost": 15
           },
           "gesture": {
-            "durationTime": 540,
+            "durationTime": 490,
             "lowLatency": true,
             "extraMargin": 20,
             "boost": 20

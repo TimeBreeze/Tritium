@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon778/778+/782",
-  "author": "Tritium",
+  "author": "Suni",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -195,7 +195,7 @@
       },
       "fast": {
         "powerLimit": 10000,
-        "perfMargin": [30, 30, 30],
+        "perfMargin": [30, 90, 90],
         "upRateLatency": 0,
         "overHeatTemp": 95,
         "burstCapacity": 0,
@@ -208,28 +208,28 @@
             "boost": 0
           },
           "tap": {
-            "durationTime": 100,
+            "durationTime": 450,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 20
           },
           "swipe": {
-            "durationTime": 200,
+            "durationTime": 470,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 20
           },
           "gesture": {
             "durationTime": 100,
             "lowLatency": false,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 20
           },
           "heavyload": {
-            "durationTime": 1000,
+            "durationTime": 1500,
             "lowLatency": true,
             "extraMargin": 20,
-            "boost": 0
+            "boost": 40
           },
           "jank": {
             "durationTime": 100,
