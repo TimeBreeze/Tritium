@@ -1,8 +1,8 @@
 id=ct_module
 name=Tritium Scheduler
-version=V4.8.0
-versionCode=241031
+version=V4.8.1_Beta
+versionCode=241105
 author=Suni
-description=Optimizing performance ing…
+description=Optimize performance ing…
 updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
 
