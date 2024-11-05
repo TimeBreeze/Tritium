@@ -142,10 +142,10 @@
         }
       },
       "performance": {
-        "powerLimit": 5100,
-        "perfMargin": [10, 20, 50],
-        "upRateLatency": 100,
-        "overHeatTemp": 75,
+        "powerLimit": 5000,
+        "perfMargin": [10, 20, 35],
+        "upRateLatency": 80,
+        "overHeatTemp": 80,
         "burstCapacity": 17000,
         "recoverTime": 4000,
         "freqBurst": {
@@ -180,16 +180,16 @@
             "boost": 30
           },
           "jank": {
-            "durationTime": 600,
+            "durationTime": 530,
             "lowLatency": true,
-            "extraMargin": 10,
+            "extraMargin": 20,
             "boost": 15
           },
           "bigJank": {
-            "durationTime": 1300,
+            "durationTime": 1500,
             "lowLatency": true,
-            "extraMargin": 15,
-            "boost": 25
+            "extraMargin": 30,
+            "boost": 30
           }
         }
       },
