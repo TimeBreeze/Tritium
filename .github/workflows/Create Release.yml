@@ -41,7 +41,7 @@ jobs:
           version='"${VERSION}"'
           versionCode='"${VERSIONCODE}"'
           author=Suni
-          description=Power By CuprumTrubo
+          description=Optimize performance ing…
           updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
           ' > ./magisk/module.prop
 
