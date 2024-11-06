@@ -632,26 +632,26 @@
     ],
     "modes": {
       "powersave": {
-        "maxFreq": 450,
-        "minFreq": 250,
+        "maxFreq": 390,
+        "minFreq": 150,
         "upRateThres": 90,
         "downRateDiff": 10
       },
       "balance": {
-        "maxFreq": 600,
-        "minFreq": 0,
-        "upRateThres": 80,
+        "maxFreq": 570,
+        "minFreq": 230,
+        "upRateThres": 85,
         "downRateDiff": 20
       },
       "performance": {
-        "maxFreq": 760,
-        "minFreq": 500,
-        "upRateThres": 50,
-        "downRateDiff": 40
+        "maxFreq": 600,
+        "minFreq": 340,
+        "upRateThres": 60,
+        "downRateDiff": 35
       },
       "fast": {
         "maxFreq": 850,
-        "minFreq": 810,
+        "minFreq": 800,
         "upRateThres": 20,
         "downRateDiff": 20
       }
