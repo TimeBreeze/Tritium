@@ -9,6 +9,7 @@ git add -A
 
 # 提交
 git commit -m "$input"
-
+#同步远程仓库文件
+git pull
 # 推送到远程的main分支
-git push -f origin main
+git push origin main
