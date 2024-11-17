@@ -1,5 +1,6 @@
 # Tritium Scheduler
 
+
 <img src="https://img.nightrainmilkyway.cn/img/202410231543636.png" style="width: 96px;" alt="logo">
 
 [![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/TimeBreeze/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
@@ -21,7 +22,11 @@
 
 骁龙：`845/855/855+/860/865/865+/870/888/888+/8Gen1/8+Gen1/7+Gen2/8Gen2/8Gen3/765/765G/768G/778G/778G+/782/835/7+Gen3`
 
-天玑：`1000+/8000/8100/9200/9200+`
+维护者[@Suni-code](https://github.com/Suni-code)
+
+天玑：`700/820/900/1000/1100/1200/7200/8100/8200/8300/9100/9200/9200+/9300`
+
+维护者[@xianyu6556](https://github.com/xianyu6556)
 
 ## 使用方法
 
