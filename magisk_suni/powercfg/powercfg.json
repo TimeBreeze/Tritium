@@ -1,0 +1,13 @@
+{
+    "name": "Tritium",
+    "author": "Suni",
+    "version": "V4.8.1",
+    "versionCode": 241108,
+    "features": {
+        "strict": true,
+        "pedestal": true
+    },
+    "module": "Tritium",
+    "state": "/sdcard/Android/ct/cur_mode.txt",
+    "entry": "/data/powercfg.sh"
+}
