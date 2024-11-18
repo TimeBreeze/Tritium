@@ -1,0 +1,17 @@
+{
+  "name": "_Universal_Config",
+  "author": "username",
+  "configVersion": 9,
+  "CpuGovernor": {
+    "enable": false
+  },
+  "ThreadSchedOpt": {
+    "enable": false
+  },
+  "MtkGpuGovernor": {
+    "enable": false
+  },
+  "FileWriter": {
+    "enable": false
+  }
+}

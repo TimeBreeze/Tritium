@@ -13,6 +13,7 @@
 ## 贡献:
 - @chenzyadb 
 - @Suni-code
+- @xianyu6556
 - @NightRainMilkyWay
 
 Full Changelog: [`V4.8.1 -> V4.8.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
