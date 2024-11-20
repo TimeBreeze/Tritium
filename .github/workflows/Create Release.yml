@@ -49,7 +49,7 @@ jobs:
 
       - name: Zip Module
         run: |
-          cd $GITHUB_WORKSPACE/magisk
+          cd $GITHUB_WORKSPACE/magisk_suni
           zip -r $GITHUB_WORKSPACE/${ZIP_FILENAME}_${VERSION}.zip ./*
           cd configs
           zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_${VERSION}.zip ./*
