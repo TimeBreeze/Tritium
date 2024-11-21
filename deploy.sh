@@ -12,4 +12,4 @@ git commit -m "$input"
 #同步远程仓库文件
 git pull
 # 推送到远程的main分支
-git push origin main
+git push origin suni
