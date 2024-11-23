@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon765/765G/768G",
-  "author": "Suni",
+  "author": "Suni-Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,

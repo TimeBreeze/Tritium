@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon8Gen2",
-  "author": "Tritium",
+  "author": "Suni-Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -90,12 +90,12 @@
         }
       },
       "balance": {
-        "powerLimit": 2600,
-        "perfMargin": [10, 10, 20],
-        "upRateLatency": 500,
+        "powerLimit": 2800,
+        "perfMargin": [10, 15, 20],
+        "upRateLatency": 480,
         "overHeatTemp": 65,
-        "burstCapacity": 12000,
-        "recoverTime": 4800,
+        "burstCapacity": 18000,
+        "recoverTime": 5000,
         "freqBurst": {
           "none": {
             "durationTime": 0,

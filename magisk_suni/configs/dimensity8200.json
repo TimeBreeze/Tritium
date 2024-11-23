@@ -1,6 +1,6 @@
 {
   "name": "Dimensity8200",
-  "author": "Tritium",
+  "author": "Suni-Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -90,11 +90,11 @@
         }
       },
       "balance": {
-        "powerLimit": 2600,
-        "perfMargin": [10, 15, 28],
+        "powerLimit": 2900,
+        "perfMargin": [10, 15, 25],
         "upRateLatency": 500,
         "overHeatTemp": 65,
-        "burstCapacity": 12000,
+        "burstCapacity": 9000,
         "recoverTime": 5000,
         "freqBurst": {
           "none": {

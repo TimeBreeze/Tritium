@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon888/888+",
-  "author": "Tritium",
+  "author": "Suni",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -90,12 +90,12 @@
         }
       },
       "balance": {
-        "powerLimit": 2600,
+        "powerLimit": 2700,
         "perfMargin": [10, 15, 20],
-        "upRateLatency": 490,
+        "upRateLatency": 480,
         "overHeatTemp": 65,
-        "burstCapacity": 10000,
-        "recoverTime": 5000,
+        "burstCapacity": 9000,
+        "recoverTime": 5400,
         "freqBurst": {
           "none": {
             "durationTime": 0,

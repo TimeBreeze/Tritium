@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon845",
-  "author": "Tritium",
+  "author": "Suni",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,

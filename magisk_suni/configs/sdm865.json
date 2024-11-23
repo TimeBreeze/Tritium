@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon865/865+/870",
-  "author": "Tritium",
+  "author": "Suni",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
