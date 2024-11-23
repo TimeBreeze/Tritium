@@ -61,10 +61,6 @@ jobs:
           updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
           ' > ./magisk_fiage/module.prop
 
-          name: Validate File Hash with Output File
-
-
-      
 
       - name: Zip Module
         run: |
