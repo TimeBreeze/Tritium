@@ -1,6 +1,6 @@
 {
   "name": "Dimensity9200/9200+",
-  "author": "Tritium",
+  "author": "Suni-Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -92,10 +92,10 @@
       "balance": {
         "powerLimit": 2800,
         "perfMargin": [10, 15, 20],
-        "upRateLatency": 440,
+        "upRateLatency": 480,
         "overHeatTemp": 70,
-        "burstCapacity": 21500,
-        "recoverTime": 4500,
+        "burstCapacity": 11000,
+        "recoverTime": 5700,
         "freqBurst": {
           "none": {
             "durationTime": 0,
