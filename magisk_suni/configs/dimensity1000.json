@@ -1,6 +1,6 @@
 {
   "name": "Dimensity1000+",
-  "author": "Tritium",
+  "author": "Suni-Tritium",
   "configVersion": 10,
   "CpuGovernor": {
     "enable": true,
@@ -82,11 +82,11 @@
         }
       },
       "balance": {
-        "powerLimit": 2600,
+        "powerLimit": 2800,
         "perfMargin": [15, 20],
         "upRateLatency": 500,
         "overHeatTemp": 65,
-        "burstCapacity": 12000,
+        "burstCapacity": 9000,
         "recoverTime": 5000,
         "freqBurst": {
           "none": {
