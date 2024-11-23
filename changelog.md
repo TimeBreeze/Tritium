@@ -1,7 +1,17 @@
 更新日志:
 
-## V4.9.0
+## V4.9.0 
+@Suni-code
 - 优化部分型号日用使用流畅度
+@xianyu6556
+- 暂无
+
+### 维护者:
+- @Suni-code(Magisk_suni_Vxxx.zip)
+- @xianyu6556(Magisk_fiage_Vxxx.zip)
+
+> [!TIP]
+> 两位维护者的大版本相同，细节和风格会有差异，适配的SOC不同，选择适合自己的版本即可
 
 
 ## 贡献:
