@@ -61,7 +61,10 @@ jobs:
           updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
           ' > ./magisk_fiage/module.prop
 
-          
+          name: Validate File Hash with Output File
+
+
+      
 
       - name: Zip Module
         run: |
@@ -75,6 +78,14 @@ jobs:
           cd configs
           zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_fiage_${VERSION}.zip ./*
            cd ../../.
+
+
+      - name: Validate File Hash with Output File
+        run: |
+          sha256sum $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.zip > $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.hash
+          sha256sum $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.zip > $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.hash
+          cat $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.hash
+          cat $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.hash
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -90,6 +101,7 @@ jobs:
           files: |
               ./*.zip
               ./apk/*.apk
+              ./*.hash
           repository: TimeBreeze/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
@@ -98,6 +110,7 @@ jobs:
       - name: 同步 repo
         run: |
           rm -rf ./*.zip
+           rm -rf ./*.hash
           bash -c 'if [ $(git status --porcelain | wc -l) -eq 0 ]; then
             echo "工作树无变更，跳过提交步骤..."
           else
