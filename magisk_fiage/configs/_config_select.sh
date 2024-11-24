@@ -98,6 +98,9 @@ get_config_name() {
     kalama*)
         echo "sdm8gen2"
         ;;
+    sun*)
+        echo "sdm8elite"
+        ;;
     taro*)
         get_taro_name
         ;;
@@ -173,6 +176,18 @@ get_config_name() {
     msm8996*)
         echo "sdm820"
         ;;
+    mt6750*)
+        echo "helio_p10"
+        ;;
+    mt6752*)
+        echo "helio_p10"
+        ;;
+    mt6753*)
+        echo "helio_p10"
+        ;;
+    mt6755*)
+        echo "helio_p10"
+        ;;
     mt6771*)
         echo "helio_p60"
         ;;
@@ -194,6 +209,12 @@ get_config_name() {
     mt6789*)
         echo "helio_g99"
         ;;
+    mt6797*)
+        echo "helio_x20"
+        ;;
+    mt6799*)
+        echo "helio_x30"
+        ;;
     mt6833*)
         echo "dimensity700"
         ;;
@@ -211,6 +232,9 @@ get_config_name() {
         ;;
     mt6877*)
         echo "dimensity900"
+        ;;
+    mt6878*)
+        echo "dimensity7300"
         ;;
     mt6885*)
         echo "dimensity1000"
@@ -238,6 +262,9 @@ get_config_name() {
         ;;
     mt6989*)
         echo "dimensity9300"
+        ;;
+    mt6991*)
+        echo "dimensity9400"
         ;;
     kirin970*)
         echo "kirin970"
