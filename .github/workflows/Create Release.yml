@@ -49,7 +49,7 @@ jobs:
           versionCode='"${VERSIONCODE}"'
           author=Suni
           description=Optimize performance ing…
-          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
+          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
           ' > ./magisk_suni/module.prop
 
            echo 'id=ct_module
