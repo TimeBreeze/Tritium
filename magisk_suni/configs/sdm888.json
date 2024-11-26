@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon888/888+",
-  "author": "chenzyadb",
+  "author": "Suni-Tritium",
   "configVersion": 11,
   "CpuGovernor": {
     "enable": true,
@@ -41,25 +41,25 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 3000,
+        "powerLimit": 2000,
         "multiLoadLimit": true,
         "multiLoadThres": [50, 50, 50],
         "maxMargin": [10, 10, 10],
-        "maxLatency": [40, 40, 40]
+        "maxLatency": [60, 50, 60]
       },
       "balance": {
-        "powerLimit": 4000,
+        "powerLimit": 3300,
         "multiLoadLimit": true,
-        "multiLoadThres": [50, 50, 50],
-        "maxMargin": [20, 20, 20],
-        "maxLatency": [30, 30, 30]
+        "multiLoadThres": [40, 40, 45],
+        "maxMargin": [10, 15, 25],
+        "maxLatency": [50, 40, 50]
       },
       "performance": {
-        "powerLimit": 5000,
-        "multiLoadLimit": false,
+        "powerLimit": 4700,
+        "multiLoadLimit": true,
         "multiLoadThres": [50, 50, 50],
-        "maxMargin": [30, 30, 30],
-        "maxLatency": [20, 20, 20]
+        "maxMargin": [25, 30, 45],
+        "maxLatency": [30, 30, 20]
       },
       "fast": {
         "powerLimit": 10000,

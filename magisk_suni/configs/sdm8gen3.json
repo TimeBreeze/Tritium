@@ -1,6 +1,6 @@
 {
   "name": "Snapdragon8Gen3",
-  "author": "chenzyadb",
+  "author": "Suni-Tritium",
   "configVersion": 11,
   "CpuGovernor": {
     "enable": true,
@@ -50,25 +50,25 @@
     ],
     "modes": {
       "powersave": {
-        "powerLimit": 3000,
+        "powerLimit": 2000,
         "multiLoadLimit": true,
-        "multiLoadThres": [50, 50, 50, 50],
-        "maxMargin": [10, 10, 10, 10],
-        "maxLatency": [40, 40, 40, 40]
+        "multiLoadThres": [40, 50, 40, 40],
+        "maxMargin": [10, 10, 15, 15],
+        "maxLatency": [50, 50, 50, 60]
       },
       "balance": {
-        "powerLimit": 4000,
+        "powerLimit": 3000,
         "multiLoadLimit": true,
-        "multiLoadThres": [50, 50, 50, 50],
-        "maxMargin": [20, 20, 20, 20],
-        "maxLatency": [30, 30, 30, 30]
+        "multiLoadThres": [50, 50, 40, 40],
+        "maxMargin": [20, 15, 20, 25],
+        "maxLatency": [40, 40, 45, 40]
       },
       "performance": {
-        "powerLimit": 5000,
+        "powerLimit": 4400,
         "multiLoadLimit": false,
         "multiLoadThres": [50, 50, 50, 50],
-        "maxMargin": [30, 30, 30, 30],
-        "maxLatency": [20, 20, 20, 20]
+        "maxMargin": [20, 35, 40, 45],
+        "maxLatency": [30, 20, 25, 20]
       },
       "fast": {
         "powerLimit": 10000,
