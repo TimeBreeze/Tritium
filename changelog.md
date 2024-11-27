@@ -1,4 +1,3 @@
-
 ## V5.0.0 Beta 1更新日志
 @Suni-code
 全新的TritiumV5.0版本 带来全新的底层调度框架 更精细的CPU频率调控与更加优异的游戏能耗表现
@@ -24,11 +23,13 @@
 - 更新内置模块
 - ~~无障碍~~
 
-> [!CAUTION] 此字段永久保留
+> [!CAUTION]  
 > `Magisk_suni_Vxxx.zip `与`Magisk_fiage_Vxxx.zip` 为模块.
 > `config_suni_Vxxx.zip `与`config_fiage_Vxxx.zip` 为配置.
 > 
 > `app-release.apk` 为tritium_box，小白用户请下载使用
+
+
 
 ## 贡献:
 - @chenzyadb 
