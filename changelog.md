@@ -6,6 +6,7 @@
 - 跟随上游 将调度底层版本更新至V20
 - 为性能较差的平台启用多核负载策略 以改善游戏体验
 - 优化均衡模式性能冗余 提升使用流畅度
+
 @xianyu6556
 - 暂无
 
@@ -23,7 +24,11 @@
 - 更新内置模块
 - ~~无障碍~~
 
-
+> [!CAUTION] 此字段永久保留
+> `Magisk_suni_Vxxx.zip `与`Magisk_fiage_Vxxx.zip` 为模块.
+> `config_suni_Vxxx.zip `与`config_fiage_Vxxx.zip` 为配置.
+> 
+> `app-release.apk` 为tritium_box，小白用户请下载使用
 
 ## 贡献:
 - @chenzyadb 
