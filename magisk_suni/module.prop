@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Scheduler
-version=V5.0.0_Beta_1
-versionCode=241126
+version=V5.0.0_Beta_2
+versionCode=241128
 author=Suni
 description=Optimize performance ing…
 updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
