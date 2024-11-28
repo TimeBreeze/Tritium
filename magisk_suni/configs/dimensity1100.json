@@ -51,15 +51,15 @@
         "powerLimit": 2900,
         "multiLoadLimit": true,
         "multiLoadThres": [15, 20, 20],
-        "maxMargin": [20, 20, 20],
+        "maxMargin": [20, 20, 25],
         "maxLatency": [50, 50, 60]
       },
       "performance": {
-        "powerLimit": 4600,
+        "powerLimit": 4500,
         "multiLoadLimit": true,
-        "multiLoadThres": [30, 35, 40],
+        "multiLoadThres": [50, 40, 40],
         "maxMargin": [30, 30, 40],
-        "maxLatency": [30, 25, 20]
+        "maxLatency": [30, 35, 30]
       },
       "fast": {
         "powerLimit": 10000,
@@ -554,11 +554,11 @@
         }
       },
       "tap": {
-        "durationTime": 100,
+        "durationTime": 200,
         "modes": {
           "powersave": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
+              {"name": "cpu.boost", "value": 10},
               {"name": "cpu.extra_margin", "value": 0},
               {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
@@ -572,9 +572,9 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
-              {"name": "cpu.extra_margin", "value": 0},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.boost", "value": 15},
+              {"name": "cpu.extra_margin", "value": 5},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 0},
@@ -587,8 +587,8 @@
           "performance": {
             "setProperty": [
               {"name": "cpu.boost", "value": 20},
-              {"name": "cpu.extra_margin", "value": 0},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.extra_margin", "value": 10},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 0},
@@ -602,7 +602,7 @@
             "setProperty": [
               {"name": "cpu.boost", "value": 20},
               {"name": "cpu.extra_margin", "value": 0},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 0},
@@ -615,12 +615,12 @@
         }
       },
       "swipe": {
-        "durationTime": 200,
+        "durationTime": 350,
         "modes": {
           "powersave": {
             "setProperty": [
               {"name": "cpu.boost", "value": 0},
-              {"name": "cpu.extra_margin", "value": 10},
+              {"name": "cpu.extra_margin", "value": 5},
               {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
@@ -633,9 +633,9 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 0},
-              {"name": "cpu.extra_margin", "value": 10},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.boost", "value": 10},
+              {"name": "cpu.extra_margin", "value": 5},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 0},
@@ -647,9 +647,9 @@
           },
           "performance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 0},
+              {"name": "cpu.boost", "value": 15},
               {"name": "cpu.extra_margin", "value": 10},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 0},
@@ -663,7 +663,7 @@
             "setProperty": [
               {"name": "cpu.boost", "value": 0},
               {"name": "cpu.extra_margin", "value": 10},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 0},
@@ -676,11 +676,11 @@
         }
       },
       "gesture": {
-        "durationTime": 200,
+        "durationTime": 490,
         "modes": {
           "powersave": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
+              {"name": "cpu.boost", "value": 15},
               {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
@@ -694,9 +694,9 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
+              {"name": "cpu.boost", "value": 15},
               {"name": "cpu.extra_margin", "value": 10},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 10},
@@ -710,11 +710,11 @@
             "setProperty": [
               {"name": "cpu.boost", "value": 20},
               {"name": "cpu.extra_margin", "value": 10},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
-              {"name": "mtk_gpu.boost", "value": 0},
+              {"name": "mtk_gpu.boost", "value": 10},
               {"name": "mtk_gpu.extra_margin", "value": 10},
-              {"name": "mtk_gpu.low_latency", "value": false},
+              {"name": "mtk_gpu.low_latency", "value": true},
               {"name": "devfreq.ddr.min_freq", "value": 3000},
               {"name": "devfreq.gpu.min_freq", "value": 0}
             ],
@@ -737,7 +737,7 @@
         }
       },
       "heavyload": {
-        "durationTime": 1000,
+        "durationTime": 1100,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -755,8 +755,8 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 0},
-              {"name": "cpu.extra_margin", "value": 20},
+              {"name": "cpu.boost", "value": 15},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
@@ -769,13 +769,13 @@
           },
           "performance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 0},
-              {"name": "cpu.extra_margin", "value": 20},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.boost", "value": 25},
+              {"name": "cpu.extra_margin", "value": 15},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
-              {"name": "mtk_gpu.boost", "value": 0},
+              {"name": "mtk_gpu.boost", "value": 15},
               {"name": "mtk_gpu.extra_margin", "value": 10},
-              {"name": "mtk_gpu.low_latency", "value": false},
+              {"name": "mtk_gpu.low_latency", "value": true},
               {"name": "devfreq.ddr.min_freq", "value": 3000},
               {"name": "devfreq.gpu.min_freq", "value": 0}
             ],
@@ -783,13 +783,13 @@
           },
           "fast": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 0},
+              {"name": "cpu.boost", "value": 30},
               {"name": "cpu.extra_margin", "value": 20},
-              {"name": "cpu.low_latency", "value": false},
+              {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
               {"name": "mtk_gpu.extra_margin", "value": 10},
-              {"name": "mtk_gpu.low_latency", "value": false},
+              {"name": "mtk_gpu.low_latency", "value": true},
               {"name": "devfreq.ddr.min_freq", "value": 3000},
               {"name": "devfreq.gpu.min_freq", "value": 0}
             ],
@@ -798,13 +798,13 @@
         }
       },
       "jank": {
-        "durationTime": 50,
+        "durationTime": 540,
         "modes": {
           "powersave": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
+              {"name": "cpu.boost", "value": 20},
               {"name": "cpu.extra_margin", "value": 0},
-              {"name": "cpu.low_latency", "value": true},
+              {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 40},
               {"name": "mtk_gpu.extra_margin", "value": 10},
@@ -816,11 +816,11 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
+              {"name": "cpu.boost", "value": 20},
               {"name": "cpu.extra_margin", "value": 0},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
-              {"name": "mtk_gpu.boost", "value": 40},
+              {"name": "mtk_gpu.boost", "value": 10},
               {"name": "mtk_gpu.extra_margin", "value": 10},
               {"name": "mtk_gpu.low_latency", "value": true},
               {"name": "devfreq.ddr.min_freq", "value": 4200},
@@ -831,7 +831,7 @@
           "performance": {
             "setProperty": [
               {"name": "cpu.boost", "value": 40},
-              {"name": "cpu.extra_margin", "value": 0},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 40},
@@ -859,7 +859,7 @@
         }
       },
       "bigJank": {
-        "durationTime": 100,
+        "durationTime": 1200,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -891,11 +891,11 @@
           },
           "performance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
-              {"name": "cpu.extra_margin", "value": 20},
+              {"name": "cpu.boost", "value": 55},
+              {"name": "cpu.extra_margin", "value": 30},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
-              {"name": "mtk_gpu.boost", "value": 60},
+              {"name": "mtk_gpu.boost", "value": 50},
               {"name": "mtk_gpu.extra_margin", "value": 10},
               {"name": "mtk_gpu.low_latency", "value": true},
               {"name": "devfreq.ddr.min_freq", "value": 4200},
@@ -935,13 +935,13 @@
             "temp": -1, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 8000},
-              {"name": "mtk_gpu.max_freq", "value": 710},
+              {"name": "mtk_gpu.max_freq", "value": 590},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 10000}
             ]
           },
           {
-            "temp": 80, 
+            "temp": 60, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 5000},
               {"name": "mtk_gpu.max_freq", "value": 600},
@@ -972,7 +972,7 @@
             ]
           },
           {
-            "temp": 80, 
+            "temp": 75, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 5000},
               {"name": "mtk_gpu.max_freq", "value": 710},
@@ -981,7 +981,7 @@
             ]
           },
           {
-            "temp": 90, 
+            "temp": 85, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 2000},
               {"name": "mtk_gpu.max_freq", "value": 600},
