@@ -12,7 +12,9 @@
 - 更新模块刷入文件
 
 @xianyu6556
-- 暂无
+- 适配1100/1200/888/8g1+
+- 优化省电模式
+- 性能和均衡合理分配
 
 ### 维护者:
 [@Suni-code](https://github.com/Suni-code) (Magisk_suni_Vxxx.zip)
@@ -42,7 +44,7 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V4.9.0 -> V5.0.0_Beta_1`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.0.0_Beta_1 -> V5.0.0_Beta_2.5`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
