@@ -910,27 +910,27 @@
       "powersave": {
         "actions": [
           {
-            "temp": -1, 
+            "temp": 55, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 8000},
+              {"name": "cpu.max_power", "value": 2200},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 400}
             ]
           },
           {
-            "temp": 80, 
+            "temp": 60, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 5000},
+              {"name": "cpu.max_power", "value": 2000},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 300}
             ]
           },
           {
-            "temp": 90, 
+            "temp": 65, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 2000},
+              {"name": "cpu.max_power", "value": 1800},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 300}
@@ -941,27 +941,27 @@
       "balance": {
         "actions": [
           {
-            "temp": -1, 
+            "temp": 60, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 8000},
+              {"name": "cpu.max_power", "value": 3200},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 500}
             ]
           },
           {
-            "temp": 80, 
+            "temp": 65, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 5000},
+              {"name": "cpu.max_power", "value": 3000},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 400}
             ]
           },
           {
-            "temp": 90, 
+            "temp": 70, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 2000},
+              {"name": "cpu.max_power", "value": 2800},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 300}
@@ -972,36 +972,36 @@
       "performance": {
         "actions": [
           {
-            "temp": -1, 
+            "temp": 60, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 10000},
+              {"name": "cpu.max_power", "value": 4900},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 600}
             ]
           },
           {
-            "temp": 80, 
+            "temp": 65, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 8000},
+              {"name": "cpu.max_power", "value": 4700},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 500}
             ]
           },
           {
-            "temp": 90, 
+            "temp": 75, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 5000},
+              {"name": "cpu.max_power", "value": 4500},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 400}
             ]
           },
           {
-            "temp": 95, 
+            "temp": 85, 
             "setProperty": [
-              {"name": "cpu.max_power", "value": 2000},
+              {"name": "cpu.max_power", "value": 4400},
               {"name": "mtk_gpu.max_freq", "value": 10000},
               {"name": "devfreq.ddr.max_freq", "value": 10000},
               {"name": "devfreq.gpu.max_freq", "value": 300}
