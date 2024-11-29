@@ -17,11 +17,12 @@
 > 两位维护者的大版本相同 细节和风格会有差异 适配的SOC不同 选择适合自己的版本即可.
 
 ### Tritium_box 更新日志
- 2.0.0_alpha 更新日志
+ 2.0.1_release 更新日志
 
 - 跟进上游
 - 更新内置模块
-- ~~无障碍~~
+- 优化使用流畅度
+- 修复部分bug
 
 > [!CAUTION]  
 > `Magisk_suni_Vxxx.zip `与`Magisk_fiage_Vxxx.zip` 为模块.
