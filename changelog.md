@@ -1,15 +1,8 @@
-## V5.0.0 Beta 2
+## V5.0.0 Beta 3
 @Suni-code
-已适配在维护的全部平台
-
 更新日志:
-- 为MTK9000平台启用多核负载策略
-- 优化性能模式的多核负载策略
-- 优化性能模式游戏帧率表现
-- 优化均衡模式功耗与流畅度
-- 降低省电与均衡模式 点击 滑动 手势操作的延迟
-- 降低性能与极速模式下的点击 滑动延迟
-- 更新模块刷入文件
+- 优化功耗表现 提升游戏体验
+- 改善温度控制
 
 @xianyu6556
 - 适配1100/1200/888/8g1+
@@ -44,7 +37,7 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V5.0.0_Beta_1 -> V5.0.0_Beta_2.5`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.0.0_Beta_2.5 -> V5.0.0_Beta_3`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
