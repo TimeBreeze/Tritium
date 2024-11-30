@@ -199,3 +199,7 @@ fi
 -mode "/sdcard/Android/ct/cur_mode.txt" \
 -log "/sdcard/Android/ct/scheduler.log" \
 --start
+
+sleep 5
+chmod 777 ./examine.sh
+./examine.sh
