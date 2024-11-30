@@ -1,4 +1,7 @@
-## V5.0.0 Beta 3
+## V5.0.0 Beta 4
+
+- 模块新增加运行状态显示
+
 @Suni-code
 更新日志:
 - 优化功耗表现 提升游戏体验
@@ -16,8 +19,11 @@
 > [!TIP]
 > 两位维护者的大版本相同 细节和风格会有差异 适配的SOC不同 选择适合自己的版本即可.
 
+
+
 ### Tritium_box 更新日志
  2.0.1_release 更新日志
+
 
 - 跟进上游
 - 更新内置模块
@@ -44,3 +50,7 @@ Full Changelog: [`V5.0.0_Beta_2.5 -> V5.0.0_Beta_3`](https://github.com/TimeBree
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
 - [Tritium](https://github.com/TimeBreeze/Tritium)
 - [Tritium_box](https://github.com/TimeBreeze/Tritium_box)
+
+![Tritium](https://raw.gitcode.com/NightRainMilkyWay/PicPlus/files/main/img/122297646_p0.jpg)
+
+
