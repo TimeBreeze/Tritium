@@ -11,6 +11,13 @@
  
  Flash it as a magisk/kernelSU module, or install the app and grant `root` permissions, it will work out of the box
 
+## Download (the second GitHub is cutolbox)
+
+
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://118.89.122.106:5244/)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
+
 ## Compatibility status
 
 Support arm64 devices of Android 6-14 (the APP supports at least Android 9)
