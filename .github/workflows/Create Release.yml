@@ -44,19 +44,19 @@ jobs:
           
           # 创建 module.prop 文件
           echo 'id=ct_module
-          name=Tritium Scheduler
+          name=Tritium Suni
           version='"${VERSION}"'
           versionCode='"${VERSIONCODE}"'
-          author=Suni
+          author=Tritium Developers
           description=Optimize performance ing…
           updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
           ' > ./magisk_suni/module.prop
 
            echo 'id=ct_module
-          name=Tritium Scheduler
+          name=Tritium Fiage
           version='"${VERSION}"'
           versionCode='"${VERSIONCODE}"'
-          author=Fiage
+          author=Tritium Developers
           description=Optimize performance ing…
           updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
           ' > ./magisk_fiage/module.prop
