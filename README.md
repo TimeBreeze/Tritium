@@ -11,6 +11,12 @@
  
  只需作为magisk/kernelSU模块刷入,或者安装app并授予`root`权限即可,开箱即用
 
+## 下载 (第二个GitHub为cutolbox)
+
+
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://118.89.122.106:5244/)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
 ## 兼容状态
 
 支持安卓6-14的arm64设备（APP最低支持安卓9）
