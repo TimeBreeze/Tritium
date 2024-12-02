@@ -1,17 +1,16 @@
-## V5.0.0 Beta 4
+## V5.0.0 Beta 5
 
-- 模块新增加运行状态显示
+更新日志:
+
+- 模块添加Apache License
 
 @Suni-code
-更新日志:
-- 优化功耗表现 提升游戏体验
-- 改善温度控制
+
+- 无
 
 @xianyu6556
-- 适配1100/1200/888/8g1+
-- 优化省电模式
-- 性能和均衡合理分配
 
+- 无
 ### 维护者:
 [@Suni-code](https://github.com/Suni-code) (Magisk_suni_Vxxx.zip)
 [@xianyu6556](https://github.com/xianyu6556)(Magisk_fiage_Vxxx.zip)
@@ -22,7 +21,12 @@
 
 
 ### Tritium_box 更新日志
- 2.0.1_release 更新日志
+ 2.0.2_release 更新日志
+
+- [x] 修复了一些bug
+- [x] 优化使用流畅度
+- [ ] 优化了一些代码
+- [ ] 添加了一些新功能
 
 
 - 跟进上游
@@ -44,7 +48,7 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V5.0.0_Beta_2.5 -> V5.0.0_Beta_3`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.0.0_Beta_4 -> V5.0.0_Beta_5`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
