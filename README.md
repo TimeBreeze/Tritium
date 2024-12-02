@@ -11,6 +11,12 @@
  
  只需作为magisk/kernelSU模块刷入,或者安装app并授予`root`权限即可,开箱即用
 
+## 使用方法
+- [官方网站](https://tritium.nightrainmilkyway.cn/)
+- [自定义开发](https://tritium.nightrainmilkyway.cn/guide/Customize)
+ 
+> `欢迎任何人加入我们共同分享配置文件`
+  
 ## 下载 (第二个GitHub为cutolbox)
 
 
@@ -40,12 +46,7 @@
 
 > [!TIP]
 > 两位维护者的大版本相同，细节和风格会有差异，适配的SOC不同，选择适合自己的版本即可
-> `欢迎任何人加入我们共同分享配置文件`
 
-## 使用方法
-
-- [安装教程](https://tritium.nightrainmilkyway.cn/guide/use)
-- [官方网站](https://tritium.nightrainmilkyway.cn/)
 
 
 ## 讨论
