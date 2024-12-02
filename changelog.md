@@ -3,6 +3,8 @@
 更新日志:
 
 - 模块添加Apache License
+- 跟进上游调度更新
+- 修复了一些bug
 
 @Suni-code
 - 无
@@ -20,9 +22,9 @@
 
 
 ### Tritium_box 更新日志
- 2.0.2_release 更新日志
+ 2.0.3_release 更新日志
 
-- [x] 修复了一些bug
+- [x] 修复了一些闪退bug
 - [x] 优化使用流畅度
 - [ ] 优化了一些代码
 - [ ] 添加了一些新功能
@@ -53,7 +55,4 @@ Full Changelog: [`V5.0.0_Beta_4 -> V5.0.0_Beta_5`](https://github.com/TimeBreeze
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
 - [Tritium](https://github.com/TimeBreeze/Tritium)
 - [Tritium_box](https://github.com/TimeBreeze/Tritium_box)
-
-![Tritium](https://raw.gitcode.com/NightRainMilkyWay/PicPlus/files/main/img/122297646_p0.jpg)
-
 
