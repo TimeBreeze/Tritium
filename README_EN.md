@@ -11,6 +11,12 @@
  
  Flash it as a magisk/kernelSU module, or install the app and grant `root` permissions, it will work out of the box
 
+## User Guide 
+- [Official Website](https://tritium.nightrainmilkyway.cn/)
+- [Customized Development](https://tritium.nightrainmilkyway.cn/guide/Customize)  
+  
+> `Welcome to join us to develop configuration files`
+
 ## Download (the second GitHub is cutolbox)
 
 
@@ -39,13 +45,6 @@ Snapdragon：`888/888+/8Gen1/8+Gen1/`
 MediaTek: `1100/1200/`
 > [!TIP]
 > `Both maintainers have the same major version, details and style will be different, adapted to different SOC, just choose the one that suits you 
-> `Anyone is welcome to join us to share the configuration file`.
-
-## Usage
-
-- [Installation Tutorial](https://tritium.nightrainmilkyway.cn/guide/use)
-- [Official website](https://tritium.nightrainmilkyway.cn/)
-
 
 
 ## 许可证
