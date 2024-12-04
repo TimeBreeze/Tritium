@@ -1,13 +1,6 @@
-## V5.0.0 Beta 5
-
-更新日志:
-
-- 模块添加Apache License
-- 跟进上游调度更新
-- 修复了一些bug
-
+## V5.0.0 Beta 6
 @Suni-code
-- 无
+- 优化调度流畅度 提升调度稳定性
 
 @xianyu6556
 - 无
@@ -49,7 +42,7 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V5.0.0_Beta_4 -> V5.0.0_Beta_5`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.0.0_Beta_5 -> V5.0.0_Beta_6`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
