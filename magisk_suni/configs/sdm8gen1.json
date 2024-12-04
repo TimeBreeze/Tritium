@@ -5,7 +5,7 @@
   "CpuGovernor": {
     "enable": true,
     "params": {
-      "maxRateHz": 100,
+      "maxRateHz": 200,
       "minRateHz": 20,
       "activeDelay": 2000,
       "freqStep": 200

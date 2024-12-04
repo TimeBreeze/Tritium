@@ -65,6 +65,7 @@
 
 [CuJankDetector](https://github.com/chenzyadb/CuJankDetector): 钩住 surfaceflinger 以检测卡顿。
 
+[CuUtilMonitor](https://github.com/chenzyadb/CuUtilMonitor): 利用内核中的eBPF获取更准确的CPU负载数据
 
 # ⭐ Star History
 
