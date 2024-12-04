@@ -1,4 +1,4 @@
-**简体中文** | [English](README_EN.md) | [简体中文](README.md) 
+**English** | [English](README.md) | [简体中文](README_CN.md) 
 
 # Tritium Scheduler
 
@@ -7,62 +7,55 @@
 
 [![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/TimeBreeze/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
 
-## 特性
+## characteristic
  
- 只需作为magisk/kernelSU模块刷入,或者安装app并授予`root`权限即可,开箱即用
+ Flash it as a magisk/kernelSU module, or install the app and grant `root` permissions, it will work out of the box
 
-## 使用方法
-- [官方网站](https://tritium.nightrainmilkyway.cn/)
-- [自定义开发](https://tritium.nightrainmilkyway.cn/guide/Customize)
- 
-> `欢迎任何人加入我们共同分享配置文件`
+## User Guide 
+- [Official Website](https://tritium.nightrainmilkyway.cn/)
+- [Customized Development](https://tritium.nightrainmilkyway.cn/guide/Customize)  
   
-## 下载 (第二个GitHub为cutolbox)
+> `Welcome to join us to develop configuration files`
+
+## Download (the second GitHub is cutolbox)
 
 
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://118.89.122.106:5244/)
-[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
-## 兼容状态
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 
-支持安卓6-14的arm64设备（APP最低支持安卓9）
+## Compatibility status
 
-本调度在类原生系统下效果最佳
+Support arm64 devices of Android 6-14 (the APP supports at least Android 9)
 
-目前支持架构 : `arm64-v8a` 
+This scheduling works best with native-like systems
 
-支持的SOC列表（后续也可能会增加）
-（注：仅代表本调度，并不代表原CT）
+Currently supported architectures : `arm64-v8a`.
 
-#### 维护者 : [@Suni-code](https://github.com/Suni-code) (Magisk_suni_Vxxx.zip)
-骁龙：`845/855/855+/860/865/865+/870/888/888+/8Gen1/8+Gen1/7+Gen2/8Gen2/8Gen3/835/7+Gen3`
+List of supported SOCs (may also be added later) (Note: represents this dispatch only and does not represent the original CT)
 
-天玑：`1100/1200/8100/8200/8300/9000/9200/9200+/`
+#### Maintainer : [@Suni-code](https://github.com/Suni-code) (Magisk_suni_Vxxx.zip)
+Snapdragon：`845/855/855+/860/865/865+/870/888/888+/8Gen1/8+Gen1/7+Gen2/8Gen2/8Gen3/835/7+Gen3`
 
-#### 维护者 : [@xianyu6556](https://github.com/xianyu6556)(Magisk_fiage_Vxxx.zip)
-骁龙：`888/888+/8Gen1/8+Gen1/`
+MediaTek：`1100/1200/8100/8200/8300/9000/9200/9200+/`
 
-天玑：`1100/1200/`
+#### Maintainer : [@xianyu6556](https://github.com/xianyu6556)(Magisk_fiage_Vxxx.zip)
+Snapdragon：`888/888+/8Gen1/8+Gen1/`
 
+MediaTek: `1100/1200/`
 > [!TIP]
-> 两位维护者的大版本相同，细节和风格会有差异，适配的SOC不同，选择适合自己的版本即可
+> `Both maintainers have the same major version, details and style will be different, adapted to different SOC, just choose the one that suits you 
 
 
-
-## 讨论
-
-- QQ群组: [Tritium](https://qm.qq.com/q/rFzx3jszXU)
-- QQ频道: [Tritium](https://pd.qq.com/s/te0rscpe)
-
-## 许可证
+## License
 
 [Apache-2.0 license](https://github.com/TimeBreeze/Tritium/blob/main/LICENSE)
 
-## 鸣谢
+## Thanks
 
-[CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler) : 一个简单可靠的性能调度.
+[CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler) : A simple and reliable performance scheduler.
 
-[CuJankDetector](https://github.com/chenzyadb/CuJankDetector): 钩住 surfaceflinger 以检测卡顿。
+[CuJankDetector](https://github.com/chenzyadb/CuJankDetector): Hook up surfaceflinger to detect jams。
 
 
 # ⭐ Star History
