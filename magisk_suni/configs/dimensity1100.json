@@ -615,7 +615,7 @@
         }
       },
       "swipe": {
-        "durationTime": 350,
+        "durationTime": 320,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -798,12 +798,12 @@
         }
       },
       "jank": {
-        "durationTime": 540,
+        "durationTime": 500,
         "modes": {
           "powersave": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
-              {"name": "cpu.extra_margin", "value": 0},
+              {"name": "cpu.boost", "value": 35},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 40},
@@ -816,8 +816,8 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
-              {"name": "cpu.extra_margin", "value": 0},
+              {"name": "cpu.boost", "value": 35},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 10},
@@ -863,7 +863,7 @@
         "modes": {
           "powersave": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
+              {"name": "cpu.boost", "value": 45},
               {"name": "cpu.extra_margin", "value": 20},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
@@ -877,7 +877,7 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
+              {"name": "cpu.boost", "value": 45},
               {"name": "cpu.extra_margin", "value": 20},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
