@@ -5,7 +5,7 @@
   "CpuGovernor": {
     "enable": true,
     "params": {
-      "maxRateHz": 100,
+      "maxRateHz": 200,
       "minRateHz": 20,
       "activeDelay": 2000,
       "freqStep": 200
@@ -615,7 +615,7 @@
         }
       },
       "swipe": {
-        "durationTime": 370,
+        "durationTime": 320,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -737,7 +737,7 @@
         }
       },
       "heavyload": {
-        "durationTime": 1300,
+        "durationTime": 1100,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -798,12 +798,12 @@
         }
       },
       "jank": {
-        "durationTime": 530,
+        "durationTime": 500,
         "modes": {
           "powersave": {
             "setProperty": [
               {"name": "cpu.boost", "value": 40},
-              {"name": "cpu.extra_margin", "value": 0},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 40},
@@ -817,7 +817,7 @@
           "balance": {
             "setProperty": [
               {"name": "cpu.boost", "value": 40},
-              {"name": "cpu.extra_margin", "value": 0},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 40},
@@ -859,11 +859,11 @@
         }
       },
       "bigJank": {
-        "durationTime": 100,
+        "durationTime": 1100,
         "modes": {
           "powersave": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
+              {"name": "cpu.boost", "value": 45},
               {"name": "cpu.extra_margin", "value": 20},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
@@ -877,7 +877,7 @@
           },
           "balance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 40},
+              {"name": "cpu.boost", "value": 45},
               {"name": "cpu.extra_margin", "value": 20},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},

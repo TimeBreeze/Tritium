@@ -5,7 +5,7 @@
   "CpuGovernor": {
     "enable": true,
     "params": {
-      "maxRateHz": 100,
+      "maxRateHz": 200,
       "minRateHz": 20,
       "activeDelay": 2000,
       "freqStep": 200
@@ -575,7 +575,7 @@
         }
       },
       "swipe": {
-        "durationTime": 370,
+        "durationTime": 320,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -892,7 +892,7 @@
       "powersave": {
         "actions": [
           {
-            "temp": 60, 
+            "temp": 55, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 2300},
               {"name": "mtk_gpu.max_freq", "value": 10000},
@@ -901,7 +901,7 @@
             ]
           },
           {
-            "temp": 65, 
+            "temp": 60, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 2000},
               {"name": "mtk_gpu.max_freq", "value": 10000},
@@ -910,7 +910,7 @@
             ]
           },
           {
-            "temp": 70, 
+            "temp": 65, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 1800},
               {"name": "mtk_gpu.max_freq", "value": 10000},
@@ -923,7 +923,7 @@
       "balance": {
         "actions": [
           {
-            "temp": 65, 
+            "temp": 60, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 3200},
               {"name": "mtk_gpu.max_freq", "value": 10000},
@@ -932,7 +932,7 @@
             ]
           },
           {
-            "temp": 70, 
+            "temp": 65, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 3000},
               {"name": "mtk_gpu.max_freq", "value": 10000},
@@ -941,7 +941,7 @@
             ]
           },
           {
-            "temp": 75, 
+            "temp": 70, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 2800},
               {"name": "mtk_gpu.max_freq", "value": 10000},
