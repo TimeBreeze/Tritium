@@ -1,7 +1,7 @@
-## V5.0.0 Beta 7
+## V5.0.0 release
 @Suni-code
-- 缓解部分型号日用卡顿
-- 优化部分型号温控体验
+- 优化部分MTK平台GPU性能表现
+- 提升滑动流畅性
 
 @xianyu6556
 - 无
@@ -43,7 +43,7 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V5.0.0_Beta_5 -> V5.0.0_Beta_6`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.0.0_Beta_7 -> V5.0.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)

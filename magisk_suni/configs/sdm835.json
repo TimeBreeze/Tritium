@@ -575,7 +575,7 @@
         }
       },
       "swipe": {
-        "durationTime": 320,
+        "durationTime": 450,
         "modes": {
           "powersave": {
             "setProperty": [
