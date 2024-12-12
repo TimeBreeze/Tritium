@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Fiage
-version=V5.0.0_Beta_7
-versionCode=241207
+version=V5.0.0
+versionCode=241212
 author=Tritium Developers
 description=Optimize performance ing…
 updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
