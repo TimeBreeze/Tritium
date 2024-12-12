@@ -434,19 +434,19 @@
         "downRateDelay": 50
       },
       "balance": {
-        "margin": 20,
+        "margin": 25,
         "upRateDelay": 50,
-        "downRateDelay": 50
+        "downRateDelay": 40
       },
       "performance": {
         "margin": 30,
-        "upRateDelay": 0,
+        "upRateDelay": 20,
         "downRateDelay": 50
       },
       "fast": {
-        "margin": 30,
+        "margin": 70,
         "upRateDelay": 0,
-        "downRateDelay": 50
+        "downRateDelay": 80
       }
     }
   },
@@ -615,7 +615,7 @@
         }
       },
       "swipe": {
-        "durationTime": 320,
+        "durationTime": 440,
         "modes": {
           "powersave": {
             "setProperty": [
