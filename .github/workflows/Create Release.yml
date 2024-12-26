@@ -83,8 +83,6 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub Token 访问权限
         with:
           tag_name: ${{ env.VERSION }}
           body_path: ${{ github.workspace }}/changelog.md
