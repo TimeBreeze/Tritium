@@ -5,7 +5,7 @@
 
 <img src="https://img.nightrainmilkyway.cn/img/202410231543636.png" style="width: 96px;" alt="logo">
 
-[![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/TimeBreeze/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/DreamPractice/Tritium?label=Release&logo=github)](https://github.com/DreamPractice/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/DreamPractice/Tritium?logo=gnu)](/LICENSE)
 
 ## 特性
  
@@ -21,7 +21,7 @@
 
 
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://118.89.122.106:5244/)
-[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/DreamPractice/Tritium/releases)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 
 ## 兼容状态
@@ -57,7 +57,7 @@
 
 ## 许可证
 
-[Apache-2.0 license](https://github.com/TimeBreeze/Tritium/blob/main/LICENSE)
+[Apache-2.0 license](https://github.com/DreamPractice/Tritium/blob/main/LICENSE)
 
 ## 鸣谢
 
@@ -69,14 +69,14 @@
 
 # ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=TimeBreeze/Tritium&type=Timeline)](https://star-history.com/#TimeBreeze/Tritium&Timeline)
+[![Star History Chart](https://api.star-history.com/svg?repos=DreamPractice/Tritium&type=Timeline)](https://star-history.com/#DreamPractice/Tritium&Timeline)
 
 ![Alt](https://repobeats.axiom.co/api/embed/15fccaacef7bdef095601fd00bacceffc90b3d87.svg)
 
 # 📢 Contributors
 
-<a href="https://github.com/TimeBreeze/Tritium/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=TimeBreeze/Tritium" />
+<a href="https://github.com/DreamPractice/Tritium/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DreamPractice/Tritium" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).

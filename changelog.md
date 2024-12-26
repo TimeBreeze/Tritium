@@ -1,4 +1,4 @@
-## V5.0.0 Beta 7
+## V5.1.0 
 @Suni-code
 - 缓解部分型号日用卡顿
 - 优化部分型号温控体验
@@ -13,15 +13,6 @@
 > [!TIP]
 > 两位维护者的大版本相同 细节和风格会有差异 适配的SOC不同 选择适合自己的版本即可.
 
-
-
-### Tritium_box 更新日志
- 2.0.3_release 更新日志
-
-- [x] 修复了一些闪退bug
-- [x] 优化使用流畅度
-- [ ] 优化了一些代码
-- [ ] 添加了一些新功能
 
 
 - 跟进上游
@@ -43,10 +34,10 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V5.0.0_Beta_5 -> V5.0.0_Beta_6`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.0 -> V5.0.0_Beta_7`](https://github.com/DreamPractice/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
-- [Tritium](https://github.com/TimeBreeze/Tritium)
-- [Tritium_box](https://github.com/TimeBreeze/Tritium_box)
+- [Tritium](https://github.com/DreamPractice/Tritium)
+- [Tritium_box](https://github.com/DreamPractice/Tritium_box)
 

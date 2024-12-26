@@ -26,22 +26,22 @@ jobs:
         run: |
           VERSIONCODE="${{ env.VERSIONCODE }}"
           VERSION="${{ env.VERSION }}"
-          
+
           # 创建 Tritium.json 文件
           echo '{
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_suni_'"${VERSION}"'.zip",
-            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/changelog.md"
+            "zipUrl": "https://github.moeyy.xyz/https://github.com/DreamPractice/Tritium/releases/download/'"${VERSION}"'/Magisk_suni_'"${VERSION}"'.zip",
+            "changelog": "https://github.moeyy.xyz/https://github.com/DreamPractice/Tritium/blob/main/changelog.md"
           }' > Tritium_suni.json
 
           echo '{
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_fiage_'"${VERSION}"'.zip",
-            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/changelog.md"
+            "zipUrl": "https://github.moeyy.xyz/https://github.com/DreamPractice/Tritium/releases/download/'"${VERSION}"'/Magisk_fiage_'"${VERSION}"'.zip",
+            "changelog": "https://github.moeyy.xyz/https://github.com/DreamPractice/Tritium/blob/main/changelog.md"
           }' > Tritium_fiage.json
-          
+
           # 创建 module.prop 文件
           echo 'id=ct_module
           name=Tritium Suni
@@ -49,7 +49,7 @@ jobs:
           versionCode='"${VERSIONCODE}"'
           author=Tritium Developers
           description=Optimize performance ing…
-          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
+          updateJson=https://github.moeyy.xyz/https://github.com/DreamPractice/Tritium/blob/main/Tritium_suni.json
           ' > ./magisk_suni/module.prop
 
            echo 'id=ct_module
@@ -58,9 +58,8 @@ jobs:
           versionCode='"${VERSIONCODE}"'
           author=Tritium Developers
           description=Optimize performance ing…
-          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
+          updateJson=https://github.moeyy.xyz/https://github.com/DreamPractice/Tritium/blob/main/Tritium_fiage.json
           ' > ./magisk_fiage/module.prop
-
 
       - name: Zip Module
         run: |
@@ -75,7 +74,6 @@ jobs:
           zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_fiage_${VERSION}.zip ./*
            cd ../../.
 
-
       - name: Validate File Hash with Output File
         run: |
           sha256sum $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.zip > $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.hash
@@ -86,7 +84,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub Token 访问权限
         with:
           tag_name: ${{ env.VERSION }}
           body_path: ${{ github.workspace }}/changelog.md
@@ -95,10 +93,10 @@ jobs:
           body: ${{ env.RELEASE_NOTES }}
 
           files: |
-              ./*.zip
-              ./apk/*.apk
-              ./*.hash
-          repository: TimeBreeze/Tritium
+            ./*.zip
+            ./apk/*.apk
+            ./*.hash
+          repository: DreamPractice/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
