@@ -1,7 +1,6 @@
-## V5.0.0 release
+## V5.1.0 release
 @Suni-code
-- 优化部分MTK平台GPU性能表现
-- 提升滑动流畅性
+- 同步上游更新
 
 @xianyu6556
 - 无
@@ -43,7 +42,7 @@
 - @xianyu6556
 - @NightRainMilkyWay
 
-Full Changelog: [`V5.0.0_Beta_7 -> V5.0.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.0.2 -> V5.1.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
