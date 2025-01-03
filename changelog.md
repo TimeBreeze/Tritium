@@ -14,15 +14,6 @@
 
 
 
-### Tritium_box 更新日志
- 2.0.3_release 更新日志
-
-- [x] 修复了一些闪退bug
-- [x] 优化使用流畅度
-- [ ] 优化了一些代码
-- [ ] 添加了一些新功能
-
-
 - 跟进上游
 - 更新内置模块
 - 优化使用流畅度
@@ -40,7 +31,7 @@
 - @chenzyadb 
 - @Suni-code
 - @xianyu6556
-- @NightRainMilkyWay
+- @YumeYuka
 
 Full Changelog: [`V5.0.2 -> V5.1.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
