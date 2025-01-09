@@ -21,6 +21,7 @@
 
 > [!CAUTION]  
 > `Magisk开头的文件` 为模块版调度 用于在Magisk Ksu等Root管理器中刷入后使用
+>
 > `config开头的文件` 为调度配置文件 用于导入[CuToolbox](https://github.com/chenzyadb/CuprumTurbo-Scheduler)使用
 > 
 > `app-release.apk` Tritium_box开箱即用 无需任何学习成本
