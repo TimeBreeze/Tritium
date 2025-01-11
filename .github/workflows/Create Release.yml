@@ -72,7 +72,7 @@ jobs:
           zip -r $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.zip ./*
           cd configs
           zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_fiage_${VERSION}.zip ./*
-           cd ../../.
+          cd ../../.
 
       - name: Validate File Hash with Output File
         run: |
@@ -81,8 +81,8 @@ jobs:
           cat $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.hash
           cat $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.hash
 
-      - name: Release
-        uses: softprops/action-gh-release@v2
+      - name: GH Release
+        uses: softprops/action-gh-release@v2.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub Token 访问权限
         with:
@@ -99,7 +99,7 @@ jobs:
           repository: DreamPractice/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
-          token: ${{ github.token }}
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
       - name: 同步 repo
         run: |
