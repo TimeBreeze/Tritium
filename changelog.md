@@ -1,4 +1,5 @@
-**V5.1.1**
+**V5.1.2**
+
 @Suni-code
 - 合并上游更新文件
 
@@ -6,18 +7,11 @@
 - 无
   
 ### 维护者:
-[@Suni-code](https://github.com/Suni-code) 
+[@Suni-code](https://github.com/Suni-code)  
 [@xianyu6556](https://github.com/xianyu6556)
 
 > [!TIP]
 > 两位维护者的版本号相同 适配的SOC不同 在调度风格上会有差异 选择适合自己的即可
-
-**Tritium_Box**
-更新日志:
-- 跟进上游
-- 更新内置模块
-- 优化使用流畅度
-- 修复部分bug
 
 > [!CAUTION]  
 > `Magisk开头的文件` 为模块版调度 用于在Magisk Ksu等Root管理器中刷入后使用
@@ -33,7 +27,7 @@
 - @xianyu6556
 - @YumeYuka
 
-Full Changelog: [`V5.1.0 -> V5.1.1`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.1 -> V5.1.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
