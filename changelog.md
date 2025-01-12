@@ -1,6 +1,7 @@
 **V5.1.3**
 
 * 修改模块安装过程
+* 去除多余资产文件
 
 @Suni-code
 - 合并上游更新文件
@@ -19,7 +20,7 @@
 > [!CAUTION]  
 > `Magisk开头的文件` 为模块版调度 用于在Magisk Ksu等Root管理器中刷入后使用
 >
-> `config开头的文件` 为调度配置文件 用于导入[CuToolbox](https://github.com/chenzyadb/CuprumTurbo-Scheduler)使用
+> `config不在单独作为资产` 需要从magisk模块中获取 用于导入[CuToolbox](https://github.com/chenzyadb/CuprumTurbo-Scheduler)使用
 > 
 > `app-release.apk` Tritium_box开箱即用 无需任何学习成本
 
