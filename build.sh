@@ -5,15 +5,17 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
-targetRoot="$1"
+targetRoot="$(realpath "$1")"
 targetName="$2"
+
+if [ ! -d "$targetRoot" ]; then
+    echo "Error: Directory $targetRoot does not exist."
+    exit 1
+fi
 
 for file in $(find "$targetRoot/"); do
     touch -c -t 000001010000 "$file"
 done
-
-workDir="$(pwd)"
-targetRoot="$workDir/$targetRoot"
 
 rm -f "$targetRoot/hashList.dat"
 for file in $(find "$targetRoot/" -type f -not -path "*META-INF*"); do
