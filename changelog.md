@@ -1,4 +1,6 @@
-**V5.1.2**
+**V5.1.3**
+
+* 修改模块安装过程
 
 @Suni-code
 - 合并上游更新文件
@@ -6,6 +8,7 @@
 @xianyu6556
 - 无
   
+
 ### 维护者:
 [@Suni-code](https://github.com/Suni-code)  
 [@xianyu6556](https://github.com/xianyu6556)
@@ -26,11 +29,13 @@
 - @Suni-code
 - @xianyu6556
 - @YumeYuka
+- @GunRain
 
-Full Changelog: [`V5.1.1 -> V5.1.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.3 -> V5.1.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
 - [Tritium](https://github.com/DreamPractice/Tritium)
 - [Tritium_box](https://github.com/DreamPractice/Tritium_box)
+- [Magisk-Module-EG](https://github.com/GunRain/Magisk-Module-EG)
 

@@ -15,7 +15,6 @@
 
 #!/sbin/sh
 
-
 LOG_FILE=/storage/emulated/0/Android/ct/scheduler.log
 BASE_DIR=/data/adb/modules/ct_module/module.prop
 
