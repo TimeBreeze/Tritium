@@ -77,8 +77,8 @@ jobs:
 
           files: |
               ./*.zip
+              ../*.zip
               ./apk/*.apk
-              ./*.hash
           repository: TimeBreeze/Tritium
           # note you'll typically need to create a personal access token
           # with permissions to create releases in the other repo
