@@ -60,7 +60,9 @@ jobs:
       - name: Zip Module
         run: |
           sh $GITHUB_WORKSPACE/build.sh magisk_suni magisk_suni.zip
+          sh $GITHUB_WORKSPACE/build.sh magisk_suni/configs config_suni.zip
           sh $GITHUB_WORKSPACE/build.sh magisk_fiage magisk_fiage.zip
+          sh $GITHUB_WORKSPACE/build.sh magisk_fiage/configs config_fiage.zip
 
       - name: Release
         uses: softprops/action-gh-release@v2
