@@ -59,22 +59,9 @@ jobs:
           ' > ./magisk_fiage/module.prop
       - name: Zip Module
         run: |
-          cd $GITHUB_WORKSPACE/magisk_suni
-          zip -r $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.zip ./*
-          cd configs
-          zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_suni_${VERSION}.zip ./*
-          cd ../../.
-          cd $GITHUB_WORKSPACE/magisk_fiage
-          zip -r $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.zip ./*
-          cd configs
-          zip -r $GITHUB_WORKSPACE/${CONFIG_NAME}_fiage_${VERSION}.zip ./*
-           cd ../../.
-      - name: Validate File Hash with Output File
-        run: |
-          sha256sum $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.zip > $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.hash
-          sha256sum $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.zip > $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.hash
-          cat $GITHUB_WORKSPACE/${ZIP_FILENAME}_suni_${VERSION}.hash
-          cat $GITHUB_WORKSPACE/${ZIP_FILENAME}_fiage_${VERSION}.hash
+          sh %GITHUB_WORKSPACE%/build.sh $GITHUB_WORKSPACE/magisk_suni magisk_suni.zip
+          sh %GITHUB_WORKSPACE%/build.sh $GITHUB_WORKSPACE/magisk_fiage magisk_fiage.zip
+
       - name: Release
         uses: softprops/action-gh-release@v2
         env:

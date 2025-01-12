@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+[ -f "$MODPATH/skt-utils.sh" ] && . "$MODPATH/skt-utils.sh" || abort '! File "skt-utils.sh" does not exist!'
 
-#!/system/bin/sh
+skt_mod_install # Don't write code before this line!
+
 SKIPUNZIP=0
-MODDIR=${0%/*}
 SKIPMOUNT=false
 PROPFILE=true
 POSTFSDATA=true
@@ -23,8 +24,7 @@ LATESTARTSERVICE=true
 
 set_perm_recursive $MODPATH 0 0 0755 0644
 
-rm -rf /data/powercfg.json
-rm -rf /data/powercfg.sh
+rm -f /data/powercfg.json /data/powercfg.sh
 
 cp -f $MODPATH/powercfg/powercfg.json /data/
 cp -f $MODPATH/powercfg/powercfg.sh /data/
@@ -335,4 +335,6 @@ else
     ui_print "- ${platform_name} 您的芯片未适配😑."
     abort "- Abort!"
 fi
+
+skt_mod_install_finish # Don't write code after this line!
 
