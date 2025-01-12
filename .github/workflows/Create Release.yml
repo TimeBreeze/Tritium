@@ -59,8 +59,8 @@ jobs:
           ' > ./magisk_fiage/module.prop
       - name: Zip Module
         run: |
-          sh %GITHUB_WORKSPACE%/build.sh $GITHUB_WORKSPACE/magisk_suni magisk_suni.zip
-          sh %GITHUB_WORKSPACE%/build.sh $GITHUB_WORKSPACE/magisk_fiage magisk_fiage.zip
+          sh $GITHUB_WORKSPACE/build.sh $GITHUB_WORKSPACE/magisk_suni magisk_suni.zip
+          sh $GITHUB_WORKSPACE/build.sh $GITHUB_WORKSPACE/magisk_fiage magisk_fiage.zip
 
       - name: Release
         uses: softprops/action-gh-release@v2
