@@ -5,7 +5,7 @@
 
 <img src="https://img.nightrainmilkyway.cn/img/202410231543636.png" style="width: 96px;" alt="logo">
 
-[![Latest release](https://img.shields.io/github/v/release/DreamPractice/Tritium?label=Release&logo=github)](https://github.com/DreamPractice/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/DreamPractice/Tritium?logo=gnu)](/LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/DreamPractice/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
 
 ## characteristic
  
@@ -57,6 +57,7 @@ MediaTek: `1100/1200/`
 
 [CuJankDetector](https://github.com/chenzyadb/CuJankDetector): Hook up surfaceflinger to detect jams。
 
+[CuUtilMonitor](https://github.com/chenzyadb/CuUtilMonitor): Using eBPF in the kernel to get more accurate CPU load data
 
 # ⭐ Star History
 

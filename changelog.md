@@ -1,10 +1,8 @@
-**V5.1.3**
-
-* 修改模块安装过程
-* 去除多余资产文件
-
 @Suni-code
-- 合并上游更新文件
+- 优化部分处理器性能模式下的频率加速策略
+- 优化性能表现
+- Frequency acceleration strategy in optimizing partial processor performance mode
+- Optimize performance
 
 @xianyu6556
 - 无
@@ -32,7 +30,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.1.3 -> V5.1.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.3 -> V5.1.5`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)

@@ -738,8 +738,8 @@
           },
           "performance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 20},
-              {"name": "cpu.extra_margin", "value": 20},
+              {"name": "cpu.boost", "value": 25},
+              {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": true},
               {"name": "mtk_gpu.min_freq", "value": 0},
               {"name": "mtk_gpu.boost", "value": 0},
