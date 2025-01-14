@@ -1,8 +1,8 @@
 {
     "name": "Tritium",
-    "author": "Suni",
-    "version": "V5.1.1",
-    "versionCode": 250109,
+    "author": "Tritium Developers",
+    "version": "V5.1.5",
+    "versionCode": 250114,
     "features": {
         "strict": true,
         "pedestal": true
