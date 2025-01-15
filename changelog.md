@@ -22,6 +22,11 @@
 > 
 > `app-release.apk` Tritium_box开箱即用 无需任何学习成本
 
+### 附加模块(可选&建议)
+- [cu_jank_detector.zip](https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/modules/cu_jank_detector.zip)
+- [ct_to_system_app.zip](https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/modules/ct_to_system_app.zip)
+- [break_system_limit.zip](https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/modules/break_system_limit.zip)
+- [cu_util_monitor.zip](https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/modules/cu_util_monitor.zip)
 
 ## 贡献:
 - @chenzyadb 
@@ -34,7 +39,7 @@ Full Changelog: [`V5.1.3 -> V5.1.5`](https://github.com/TimeBreeze/Tritium/commi
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
-- [Tritium](https://github.com/DreamPractice/Tritium)
-- [Tritium_box](https://github.com/DreamPractice/Tritium_box)
+- [Tritium](https://github.com/TimeBreeze/Tritium)
+- [Tritium_box](https://github.com/TimeBreeze/Tritium_box)
 - [Magisk-Module-EG](https://github.com/GunRain/Magisk-Module-EG)
 

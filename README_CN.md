@@ -21,7 +21,7 @@
 
 
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://118.89.122.106:5244/)
-[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/DreamPractice/Tritium/releases)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 
 ## 兼容状态
@@ -69,14 +69,7 @@
 
 # ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=DreamPractice/Tritium&type=Timeline)](https://star-history.com/#DreamPractice/Tritium&Timeline)
+[![Star History Chart](https://api.star-history.com/svg?repos=TimeBreeze/Tritium&type=Timeline)](https://star-history.com/#TimeBreeze/Tritium&Timeline)
 
 ![Alt](https://repobeats.axiom.co/api/embed/15fccaacef7bdef095601fd00bacceffc90b3d87.svg)
 
-# 📢 Contributors
-
-<a href="https://github.com/DreamPractice/Tritium/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=DreamPractice/Tritium" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
