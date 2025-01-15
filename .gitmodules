@@ -1,0 +1,6 @@
+[submodule "module/CuJankDetector"]
+	path = module/CuJankDetector
+	url = https://github.com/chenzyadb/CuJankDetector
+[submodule "module/CuUtilMonitor"]
+	path = module/CuUtilMonitor
+	url = https://github.com/chenzyadb/CuUtilMonitor
