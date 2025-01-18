@@ -1,6 +1,8 @@
 [submodule "CujankDetector"]
 	path = CujankDetector
 	url = https://github.com/chenzyadb/CujankDetector
+    branch = main
 [submodule "CuUtilMonitor"]
 	path = CuUtilMonitor
 	url = https://github.com/chenzyadb/CuUtilMonitor
+    branch = main
