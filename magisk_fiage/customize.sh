@@ -13,8 +13,8 @@
 # limitations under the License.
 
 [ -f "$MODPATH/skt-utils.sh" ] && . "$MODPATH/skt-utils.sh" || abort '! File "skt-utils.sh" does not exist!'
-
 skt_mod_install # Don't write code before this line!
+
 
 SKIPUNZIP=0
 SKIPMOUNT=false

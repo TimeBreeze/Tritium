@@ -26,7 +26,7 @@
 
 ## Compatibility status
 
-Support arm64 devices of Android 6-14 (the APP supports at least Android 9)
+Support arm64 devices of Android 6-15 (the APP supports at least Android 9)
 
 This scheduling works best with native-like systems
 
@@ -49,7 +49,7 @@ MediaTek: `1100/1200/`
 
 ## License
 
-[Apache-2.0 license](https://github.com/DreamPractice/Tritium/blob/main/LICENSE)
+[Apache-2.0 license](https://github.com/TimeBreeze/Tritium/blob/main/LICENSE)
 
 ## Thanks
 

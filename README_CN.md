@@ -26,7 +26,7 @@
 
 ## 兼容状态
 
-支持安卓6-14的arm64设备（APP最低支持安卓9）
+支持安卓6-15的arm64设备（APP最低支持安卓9）
 
 本调度在类原生系统下效果最佳
 
@@ -57,7 +57,7 @@
 
 ## 许可证
 
-[Apache-2.0 license](https://github.com/DreamPractice/Tritium/blob/main/LICENSE)
+[Apache-2.0 license](https://github.com/TimeBreeze/Tritium/blob/main/LICENSE)
 
 ## 鸣谢
 
