@@ -1,8 +1,7 @@
 @Suni-code
 - 优化部分处理器性能模式下的频率加速策略
 - 优化性能表现
-- Frequency acceleration strategy in optimizing partial processor performance mode
-- Optimize performance
+
 
 @xianyu6556
 - 无
