@@ -1,12 +1,9 @@
 @Suni-code
-- 优化部分处理器性能模式下的频率加速策略
-- 优化性能表现
-
+- 优化温度与功耗的限制策略
 
 @xianyu6556
 - 无
   
-
 ### 维护者:
 [@Suni-code](https://github.com/Suni-code)  
 [@xianyu6556](https://github.com/xianyu6556)
@@ -34,7 +31,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.1.3 -> V5.1.5`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.5 -> V5.1.9`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
