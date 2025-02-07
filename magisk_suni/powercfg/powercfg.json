@@ -1,8 +1,8 @@
 {
     "name": "Tritium",
     "author": "Tritium Developers",
-    "version": "V5.1.9",
-    "versionCode": 250123,
+    "version": "V5.2.0",
+    "versionCode": 250207,
     "features": {
         "strict": true,
         "pedestal": true

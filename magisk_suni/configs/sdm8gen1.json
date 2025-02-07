@@ -901,6 +901,15 @@
       "powersave": {
         "actions": [
           {
+            "temp": -1, 
+            "setProperty": [
+              {"name": "cpu.max_power", "value": 2200},
+              {"name": "mtk_gpu.max_freq", "value": 600},
+              {"name": "devfreq.ddr.max_freq", "value": 10000},
+              {"name": "devfreq.gpu.max_freq", "value": 10000}
+            ]
+          },
+          {
             "temp": 50, 
             "setProperty": [
               {"name": "cpu.max_power", "value": 2200},
@@ -931,6 +940,15 @@
       },
       "balance": {
         "actions": [
+          {
+            "temp": -1, 
+            "setProperty": [
+              {"name": "cpu.max_power", "value": 3200},
+              {"name": "mtk_gpu.max_freq", "value": 600},
+              {"name": "devfreq.ddr.max_freq", "value": 10000},
+              {"name": "devfreq.gpu.max_freq", "value": 10000}
+            ]
+          },
           {
             "temp": 55, 
             "setProperty": [
