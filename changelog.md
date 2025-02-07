@@ -33,7 +33,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.1.5 -> V5.1.9`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.9 -> V5.2.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
