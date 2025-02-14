@@ -30,14 +30,14 @@ jobs:
           echo '{
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_suni_'"${VERSION}"'.zip",
-            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/changelog.md"
+            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_suni_'"${VERSION}"'.zip",
+            "changelog": "https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/changelog.md"
           }' > Tritium_suni.json
           echo '{
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_fiage_'"${VERSION}"'.zip",
-            "changelog": "https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/changelog.md"
+            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_fiage_'"${VERSION}"'.zip",
+            "changelog": "https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/changelog.md"
           }' > Tritium_fiage.json
           
           # 创建 module.prop 文件
@@ -47,7 +47,7 @@ jobs:
           versionCode='"${VERSIONCODE}"'
           author=Tritium Developers
           description=Optimize performance ing…
-          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
+          updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
           ' > ./magisk_suni/module.prop
            echo 'id=ct_module
           name=Tritium Fiage
@@ -55,7 +55,7 @@ jobs:
           versionCode='"${VERSIONCODE}"'
           author=Tritium Developers
           description=Optimize performance ing…
-          updateJson=https://github.moeyy.xyz/https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
+          updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
           ' > ./magisk_fiage/module.prop
       - name: Zip Module
         run: |
