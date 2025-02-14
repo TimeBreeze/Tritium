@@ -1,5 +1,7 @@
 @Suni-code
-- 优化温度与功耗的限制策略
+- 对部分处理器进行季节性优化
+- 优化省电 均衡模式功耗表现
+- 优化温控表现
 
 @xianyu6556
 - 无
@@ -31,7 +33,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.1.5 -> V5.1.9`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.1.9 -> V5.2.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
