@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium Suni
-version=V5.2.0
-versionCode=250207
+version=V5.2.1
+versionCode=250305
 author=Tritium Developers
 description=Optimize performance ing…
 updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
