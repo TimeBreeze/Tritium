@@ -30,37 +30,23 @@ jobs:
           echo '{
             "versionCode": '"${VERSIONCODE}"',
             "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_suni_'"${VERSION}"'.zip",
+            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_'"${VERSION}"'.zip",
             "changelog": "https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/changelog.md"
-          }' > Tritium_suni.json
-          echo '{
-            "versionCode": '"${VERSIONCODE}"',
-            "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_fiage_'"${VERSION}"'.zip",
-            "changelog": "https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/changelog.md"
-          }' > Tritium_fiage.json
+          }' > Tritium.json
           
           # 创建 module.prop 文件
           echo 'id=ct_module
-          name=Tritium Suni
+          name=Tritium
           version='"${VERSION}"'
           versionCode='"${VERSIONCODE}"'
           author=Tritium Developers
           description=Optimize performance ing…
-          updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium_suni.json
-          ' > ./magisk_suni/module.prop
-           echo 'id=ct_module
-          name=Tritium Fiage
-          version='"${VERSION}"'
-          versionCode='"${VERSIONCODE}"'
-          author=Tritium Developers
-          description=Optimize performance ing…
-          updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium_fiage.json
-          ' > ./magisk_fiage/module.prop
+          updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
+          ' > ./magisk/module.prop
+        
       - name: Zip Module
         run: |
-          sh $GITHUB_WORKSPACE/build.sh magisk_suni magisk_suni.zip
-          sh $GITHUB_WORKSPACE/build.sh magisk_fiage magisk_fiage.zip
+          sh $GITHUB_WORKSPACE/build.sh magisk magisk.zip
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -84,7 +70,7 @@ jobs:
       - name: 同步 repo
         run: |
           rm -rf ./*.zip
-           rm -rf ./*.hash
+          rm -rf ./*.hash
           bash -c 'if [ $(git status --porcelain | wc -l) -eq 0 ]; then
             echo "工作树无变更，跳过提交步骤..."
           else
