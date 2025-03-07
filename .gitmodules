@@ -6,3 +6,6 @@
 	path = CuUtilMonitor
 	url = https://github.com/chenzyadb/CuUtilMonitor
     branch = main
+[submodule "apk/Tritium_box"]
+	path = apk/Tritium_box
+	url = https://github.com/YumeYuka/Tritium_box
