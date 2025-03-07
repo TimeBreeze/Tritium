@@ -34,18 +34,6 @@ Currently supported architectures : `arm64-v8a`.
 
 List of supported SOCs (may also be added later) (Note: represents this dispatch only and does not represent the original CT)
 
-#### Maintainer : [@Suni-code](https://github.com/Suni-code) (Magisk_suni_Vxxx.zip)
-Snapdragon：`845/855/855+/860/865/865+/870/888/888+/8Gen1/8+Gen1/7+Gen2/8Gen2/8Gen3/835/7+Gen3`
-
-MediaTek：`1100/1200/8100/8200/8300/9000/9200/9200+/`
-
-#### Maintainer : [@xianyu6556](https://github.com/xianyu6556)(Magisk_fiage_Vxxx.zip)
-Snapdragon：`888/888+/8Gen1/8+Gen1/`
-
-MediaTek: `1100/1200/`
-> [!TIP]
-> Both maintainers have the same major version, details and style will be different, adapted to different SOC, just choose the one that suits you 
-
 
 ## License
 
