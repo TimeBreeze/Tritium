@@ -51,11 +51,11 @@
 
 ## 鸣谢
 
-[CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler) : 一个简单可靠的性能调度.
+[CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler) : A simple and reliable performance scheduler.
 
-[CuJankDetector](https://github.com/chenzyadb/CuJankDetector): 钩住 surfaceflinger 以检测卡顿。
+[CuJankDetector](https://github.com/chenzyadb/CuJankDetector): Hook up surfaceflinger to detect jams。
 
-[CuUtilMonitor](https://github.com/chenzyadb/CuUtilMonitor): 利用内核中的eBPF获取更准确的CPU负载数据
+[CuUtilMonitor](https://github.com/chenzyadb/CuUtilMonitor): Using eBPF in the kernel to get more accurate CPU load data
 
 # ⭐ Star History
 
