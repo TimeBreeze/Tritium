@@ -12,8 +12,8 @@
  只需作为magisk/kernelSU模块刷入,或者安装app并授予`root`权限即可,开箱即用
 
 ## 使用方法
-- [官方网站](https://tritium.nightrainmilkyway.cn/)
-- [自定义开发](https://tritium.nightrainmilkyway.cn/guide/Customize)
+- [官方网站](https://tritium.YumeYuka.cn/)
+- [自定义开发](https://tritium.YumeYuka.cn/guide/Customize)
  
 > `欢迎任何人加入我们共同分享配置文件`
   
@@ -21,6 +21,8 @@
 
 
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://one.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://yun.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.yumeyuka.cn/)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 
 ## 兼容状态
