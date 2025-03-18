@@ -12,8 +12,8 @@
  Flash it as a magisk/kernelSU module, or install the app and grant `root` permissions, it will work out of the box
 
 ## User Guide 
-- [Official Website](https://tritium.nightrainmilkyway.cn/)
-- [Customized Development](https://tritium.nightrainmilkyway.cn/guide/Customize)  
+- [Official Website](https://tritium.YumeYuka.cn/)
+- [Customized Development](https://tritium.YumeYuka.cn/guide/Customize)  
   
 > `Welcome to join us to develop configuration files`
 
@@ -21,6 +21,8 @@
 
 
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://one.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://yun.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.yumeyuka.cn/)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 
 
