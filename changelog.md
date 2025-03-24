@@ -3,7 +3,6 @@
 - 跟进上游
 - 更新附加模块
 
-- [x] [#93](https://github.com/TimeBreeze/Tritium/issues/93)
 
 
 ### 附加模块(可选&建议) 
@@ -22,7 +21,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.2.0 -> V5.2.1`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.2.1 -> V5.2.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
