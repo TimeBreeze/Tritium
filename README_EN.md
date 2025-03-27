@@ -2,10 +2,11 @@
 
 # Tritium Scheduler
 
-
+<div align="center">
 <img src="https://img.nightrainmilkyway.cn/img/202410231543636.png" style="width: 96px;" alt="logo">
 
-[![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/DreamPractice/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/TimeBreeze/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
+</div>
 
 ## characteristic
  
@@ -19,12 +20,14 @@
 
 ## Download (the second GitHub is cutolbox)
 
+<div align="center">
 
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://one.yumeyuka.cn/)
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://yun.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.nightrain.me/)
 [![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.yumeyuka.cn/)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
 
+</div>
 
 ## Compatibility status
 
