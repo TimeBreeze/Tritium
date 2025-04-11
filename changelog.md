@@ -1,7 +1,7 @@
 ## 变化
 
 - 跟进上游
-- 更新附加模块
+- 改进不同模式卡顿场景下的boost策略
 
 
 
@@ -21,7 +21,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.2.1 -> V5.2.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.2.2 -> V5.3.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
