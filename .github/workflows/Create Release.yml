@@ -4,82 +4,208 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "config.env"
+      - "changelog.md"
+      - "magisk/**"
+      - ".github/workflows/Create Release.yml"
+  workflow_dispatch:
+    inputs:
+      force_version:
+        description: "强制设置版本号 (留空使用config.env)"
+        required: false
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     name: Create Release
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v4
-      - name: Prepare Configuration
-        run: |
-          CONFIG_ENV=$(cat config.env | grep -w "CONFIG_ENV" | head -n 1 | cut -d "=" -f 2)
-          echo "MODULE_PACKAGING_PATH=$(cat $CONFIG_ENV | grep -w "MODULE_PACKAGING_PATHE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "ZIP_FILENAME=$(cat $CONFIG_ENV | grep -w "ZIP_FILENAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "CONFIG_NAME=$(cat $CONFIG_ENV | grep -w "CONFIG_NAME" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "IS_PRERELEASE=$(cat $CONFIG_ENV | grep -w "IS_PRERELEASE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "VERSION=$(cat $CONFIG_ENV | grep -w "VERSION" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "FILE=$(cat $CONFIG_ENV | grep -w "FILE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-          echo "VERSIONCODE=$(cat $CONFIG_ENV | grep -w "VERSIONCODE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
-      - name: Update VERSION
-        run: |
-          VERSIONCODE="${{ env.VERSIONCODE }}"
-          VERSION="${{ env.VERSION }}"
-          
-          # 创建 Tritium.json 文件
-          echo '{
-            "versionCode": '"${VERSIONCODE}"',
-            "version": "'"${VERSION}"'",
-            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/'"${VERSION}"'/Magisk_'"${VERSION}"'.zip",
-            "changelog": "https://raw.githubusercontent.com/TimeBreeze/Tritium/refs/heads/main/changelog.md"
-          }' > Tritium.json
-          
-          # 创建 module.prop 文件
-          echo 'id=ct_module
-          name=Tritium
-          version='"${VERSION}"'
-          versionCode='"${VERSIONCODE}"'
-          author=Tritium Developers
-          description=Optimize performance ing…
-          updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
-          ' > ./magisk/module.prop
-        
-      - name: Zip Module
-        run: |
-          sh $GITHUB_WORKSPACE/build.sh magisk magisk.zip
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      packages: write
 
-      - name: Release
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Cache build dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.m2/repository
+          key: ${{ runner.os }}-build-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+
+      - name: Prepare and Generate Files
+        id: prepare
+        run: |
+          CONFIG_ENV_FILE="config.env"
+          if [[ ! -f "$CONFIG_ENV_FILE" ]]; then
+            echo "::error::配置文件 $CONFIG_ENV_FILE 不存在!"
+            exit 1
+          fi
+
+          # 读取配置变量
+          CONFIG_ENV=$(grep -E '^CONFIG_ENV=' "$CONFIG_ENV_FILE" | cut -d= -f2-)
+          MODULE_PACKAGING_PATH=$(grep -E '^MODULE_PACKAGING_PATH=' "$CONFIG_ENV" | cut -d= -f2- || echo "")
+          ZIP_FILENAME=$(grep -E '^ZIP_FILENAME=' "$CONFIG_ENV" | cut -d= -f2-)
+          CONFIG_NAME=$(grep -E '^CONFIG_NAME=' "$CONFIG_ENV" | cut -d= -f2-)
+          IS_PRERELEASE=$(grep -E '^IS_PRERELEASE=' "$CONFIG_ENV" | cut -d= -f2- || echo "false")
+
+          # 处理版本号 - 允许从工作流输入覆盖
+          if [[ -n "${{ github.event.inputs.force_version }}" ]]; then
+            VERSION="${{ github.event.inputs.force_version }}"
+            echo "::notice::使用手动指定的版本号: $VERSION"
+            FORCE_VERSION=true
+          else
+            VERSION=$(grep -E '^VERSION=' "$CONFIG_ENV" | cut -d= -f2-)
+            FORCE_VERSION=false
+          fi
+
+          VERSIONCODE=$(grep -E '^VERSIONCODE=' "$CONFIG_ENV" | cut -d= -f2-)
+          FILE_VAR=$(grep -E '^FILE=' "$CONFIG_ENV" | cut -d= -f2-)
+
+          # 校验必要变量
+          MISSING_VARS=()
+          [[ -z "$VERSION" ]] && MISSING_VARS+=("VERSION")
+          [[ -z "$VERSIONCODE" ]] && MISSING_VARS+=("VERSIONCODE")
+          [[ -z "$ZIP_FILENAME" ]] && MISSING_VARS+=("ZIP_FILENAME")
+
+          if [[ ${#MISSING_VARS[@]} -gt 0 ]]; then
+            echo "::error::配置文件中缺少以下变量: ${MISSING_VARS[*]}"
+            exit 1
+          fi
+
+          # 添加日期后缀到文件名 (如果没有使用手动版本号)
+          if [[ "$FORCE_VERSION" != "true" ]]; then
+            DATE_SUFFIX=$(date '+%Y%m%d')
+            ZIP_FILENAME="${ZIP_FILENAME}_${VERSION}_${DATE_SUFFIX}.zip"
+          else
+            ZIP_FILENAME="${ZIP_FILENAME}_${VERSION}.zip"
+          fi
+
+          # 输出到环境变量
+          {
+            echo "MODULE_PACKAGING_PATH=${MODULE_PACKAGING_PATH}"
+            echo "ZIP_FILENAME=${ZIP_FILENAME}"
+            echo "CONFIG_NAME=${CONFIG_NAME}"
+            echo "IS_PRERELEASE=${IS_PRERELEASE}"
+            echo "VERSION=${VERSION}"
+            echo "FILE=${FILE_VAR}"
+            echo "VERSIONCODE=${VERSIONCODE}"
+            echo "RELEASE_NAME=Tritium_${VERSION}"
+          } >> $GITHUB_ENV
+
+          # 输出到下一个步骤
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "zip_filename=${ZIP_FILENAME}" >> $GITHUB_OUTPUT
+
+          # 打印配置信息
+          echo "======= 版本信息 ======="
+          echo "Version: ${VERSION}"
+          echo "Version Code: ${VERSIONCODE}"
+          echo "ZIP 文件名: ${ZIP_FILENAME}"
+          echo "========================"
+
+          # 生成 Tritium.json
+          cat << EOF > Tritium.json
+          {
+            "versionCode": ${VERSIONCODE},
+            "version": "${VERSION}",
+            "zipUrl": "https://github.com/TimeBreeze/Tritium/releases/download/${VERSION}/${ZIP_FILENAME}",
+            "changelog": "https://raw.githubusercontent.com/TimeBreeze/Tritium/main/changelog.md"
+          }
+          EOF
+
+          # 生成 module.prop
+          mkdir -p ./magisk
+          cat << EOF > ./magisk/module.prop
+          id=ct_module
+          name=Tritium
+          version=${VERSION}
+          versionCode=${VERSIONCODE}
+          author=Tritium Developers
+          description=安卓性能调度优化框架
+          updateJson=https://raw.githubusercontent.com/TimeBreeze/Tritium/main/Tritium.json
+          EOF
+
+      - name: Zip Module
+        id: zip
+        run: |
+          echo "::group::构建 Magisk 模块"
+          # 确保已添加执行权限
+          chmod +x "$GITHUB_WORKSPACE/build.sh"
+          # 构建模块
+          sh "$GITHUB_WORKSPACE/build.sh" magisk "${{ env.ZIP_FILENAME }}"
+
+          # 验证构建结果
+          if [[ ! -f "${{ env.ZIP_FILENAME }}" ]]; then
+            echo "::error::构建失败，未找到ZIP文件: ${{ env.ZIP_FILENAME }}"
+            exit 1
+          fi
+
+          # 生成文件校验和
+          echo "::endgroup::"
+          echo "::group::生成校验和"
+
+          SHA256=$(sha256sum "${{ env.ZIP_FILENAME }}" | cut -d ' ' -f1)
+          echo "sha256=${SHA256}" >> $GITHUB_OUTPUT
+          echo "SHA256: ${SHA256}"
+
+          echo "文件大小: $(du -h "${{ env.ZIP_FILENAME }}" | cut -f1)"
+          echo "::endgroup::"
+
+      - name: Create Release
+        id: release
         uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 访问权限
         with:
           tag_name: ${{ env.VERSION }}
+          name: ${{ env.RELEASE_NAME }}
           body_path: ${{ github.workspace }}/changelog.md
-          name: Tritium_${{ env.VERSION }}
           prerelease: ${{ env.IS_PRERELEASE }}
-          body: ${{ env.RELEASE_NOTES }}
-
           files: |
-              ./*.zip
-              ./apk/*.apk
+            ./${{ env.ZIP_FILENAME }}
+            ./apk/*.apk
+          draft: false
           repository: TimeBreeze/Tritium
-          # note you'll typically need to create a personal access token
-          # with permissions to create releases in the other repo
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          fail_on_unmatched_files: false
 
-      - name: 同步 repo
+      - name: Update Release Info
+        if: steps.release.outcome == 'success'
         run: |
-          rm -rf ./*.zip
-          rm -rf ./*.hash
-          bash -c 'if [ $(git status --porcelain | wc -l) -eq 0 ]; then
-            echo "工作树无变更，跳过提交步骤..."
-          else
-            echo "提交文件中..."
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add .
-            git commit -m "chore(generated): GitHub Actions Bot 提交的记录"
-            git log -3 --oneline
-            echo "推送更新中..."
-            git push
-          fi'
+          echo "::notice::发布创建成功！"
+          echo "版本: ${{ env.VERSION }}"
+          echo "下载链接: ${{ steps.release.outputs.url || '未获取到链接' }}"
+
+      - name: Clean Build Artifacts
+        if: always()
+        run: |
+          rm -f ./*.zip ./*.hash || true
+          echo "临时文件已清理"
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(release): 更新版本文件到 ${{ env.VERSION }} [自动提交]"
+          file_pattern: Tritium.json ./magisk/module.prop
+          commit_user_name: "GitHub Actions"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions <actions@github.com>"
+          push_options: "--force"
+          create_branch: false
+          skip_dirty_check: false
