@@ -1,7 +1,15 @@
 ## 变化
 
-- 跟进上游
-- 改进不同模式卡顿场景下的boost策略
+- 跟进上游更新
+```
+v8.2.10 正式版 更新内容:
+1.改进: 重构调度程序框架, 提升稳定性, 降低开销.
+2.改进: 调整部分配置文件, 改善游戏场景下过热的问题.
+3.其他细节优化及bug修复.
+
+v8.2.10.1 补丁:
+1.修复: ThreadSchedOpt模块在部分场景下不能正确匹配AppType的问题.
+```
 
 
 
@@ -21,7 +29,7 @@
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.2.2 -> V5.3.0`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.3.0 -> V5.3.1`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
