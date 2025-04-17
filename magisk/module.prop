@@ -1,8 +1,7 @@
 id=ct_module
 name=Tritium
-version=V5.3.0
-versionCode=250411
+version=V5.3.1
+versionCode=250418
 author=Tritium Developers
-description=Optimize performance ing…
-updateJson=https://github.com/TimeBreeze/Tritium/blob/main/Tritium.json
-
+description=安卓性能调度优化框架
+updateJson=https://raw.githubusercontent.com/TimeBreeze/Tritium/main/Tritium.json
