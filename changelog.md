@@ -1,5 +1,6 @@
 ## 变化
 
+- 修复模块刷入时配置错误的问题
 - 跟进上游更新
 ```
 v8.2.10 正式版 更新内容:
@@ -29,7 +30,7 @@ v8.2.10.1 补丁:
 - @YumeYuka
 - @GunRain
 
-Full Changelog: [`V5.3.0 -> V5.3.1`](https://github.com/TimeBreeze/Tritium/commits/main/)
+Full Changelog: [`V5.3.1 -> V5.3.2`](https://github.com/TimeBreeze/Tritium/commits/main/)
 
 ## 使用项目
 - [CuprumTurbo Scheduler](https://github.com/chenzyadb/CuprumTurbo-Scheduler)
