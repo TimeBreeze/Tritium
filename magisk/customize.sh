@@ -16,7 +16,7 @@
 
 skt_mod_install # Don't write code before this line!
 
-SKIPUNZIP=1
+SKIPUNZIP=0
 SKIPMOUNT=false
 PROPFILE=true
 POSTFSDATA=true
