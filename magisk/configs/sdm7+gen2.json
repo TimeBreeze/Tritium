@@ -523,7 +523,7 @@
         }
       },
       "tap": {
-        "durationTime": 230,
+        "durationTime": 360,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -584,7 +584,7 @@
         }
       },
       "swipe": {
-        "durationTime": 430,
+        "durationTime": 570,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -645,7 +645,7 @@
         }
       },
       "gesture": {
-        "durationTime": 490,
+        "durationTime": 690,
         "modes": {
           "powersave": {
             "setProperty": [

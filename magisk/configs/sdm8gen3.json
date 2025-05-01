@@ -532,7 +532,7 @@
         }
       },
       "tap": {
-        "durationTime": 240,
+        "durationTime": 200,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -593,7 +593,7 @@
         }
       },
       "swipe": {
-        "durationTime": 440,
+        "durationTime": 540,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -654,7 +654,7 @@
         }
       },
       "gesture": {
-        "durationTime": 490,
+        "durationTime": 620,
         "modes": {
           "powersave": {
             "setProperty": [
@@ -686,7 +686,7 @@
           },
           "performance": {
             "setProperty": [
-              {"name": "cpu.boost", "value": 10},
+              {"name": "cpu.boost", "value": 15},
               {"name": "cpu.extra_margin", "value": 10},
               {"name": "cpu.low_latency", "value": false},
               {"name": "mtk_gpu.min_freq", "value": 0},
@@ -715,7 +715,7 @@
         }
       },
       "heavyload": {
-        "durationTime": 1200,
+        "durationTime": 1500,
         "modes": {
           "powersave": {
             "setProperty": [
