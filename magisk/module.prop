@@ -1,7 +1,7 @@
 id=ct_module
 name=Tritium
 version=V5.4.0_Test
-versionCode=250501
+versionCode=250504
 author=Tritium Developers
 description=安卓性能调度优化框架
 updateJson=https://raw.githubusercontent.com/TimeBreeze/Tritium/main/Tritium.json
