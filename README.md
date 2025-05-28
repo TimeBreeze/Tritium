@@ -17,15 +17,14 @@
 - [自定义开发](https://tritium.YumeYuka.cn/guide/Customize)
  
 > `欢迎任何人加入我们共同分享配置文件`
-  
-## 下载 (第二个GitHub为cutolbox)
+
+## 下载
 
 <div align="center">
 
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://one.yumeyuka.cn/)
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.nightrain.me/)
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
+
 
 </div>
 
