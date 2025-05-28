@@ -18,14 +18,13 @@
   
 > `Welcome to join us to develop configuration files`
 
-## Download (the second GitHub is cutolbox)
+## downloading
 
 <div align="center">
 
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://one.yumeyuka.cn/)
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.nightrain.me/)
-[![](https://img.nightrainmilkyway.cn/img/202412012147430.svg)](http://pan.yumeyuka.cn/)
+[![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/TimeBreeze/Tritium/releases)
 [![](https://img.nightrainmilkyway.cn/img/202412012125310.svg)](https://github.com/chenzyadb/CuprumTurbo-Scheduler/releases)
+
 
 </div>
 
