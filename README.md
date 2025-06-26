@@ -7,7 +7,7 @@
 
 [![Latest release](https://img.shields.io/github/v/release/TimeBreeze/Tritium?label=Release&logo=github)](https://github.com/TimeBreeze/Tritium/releases/latest) [![GitHub License](https://img.shields.io/github/license/TimeBreeze/Tritium?logo=gnu)](/LICENSE)
  
-**[本项目的 CDN 加速和安全防护由腾讯 EdgeOne 赞助](https://edgeone.ai/?from=github)**
+**[本项目的 CDN 加速和安全防护由腾讯 EdgeOne 赞助](https://edgeone.ai/?from=github)**  
 **[最佳亚洲 CDN、Edge 和安全解决方案 - 腾讯 EdgeOne](https://edgeone.ai/?from=github)**
 
 <a href="https://edgeone.ai/?from=github" target="_blank">
